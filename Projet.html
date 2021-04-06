@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="fr">
 
 	<head>
 		<meta charset="utf-8">
 		<title>Formule 1</title>
 		<link rel="stylesheet" type="text/css" href="Projet.css">
 		<script type="text/javascript" src="Projet.js"></script>
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	</head>
 
 	<body>
+		
+		<div id="imageNavContainer">
+			<img id="imageNav" src="images/navImage.png" alt="menu" onclick="openNav()">
+	    </div>
 		
 		<div id="mySidenav" class="sidenav">
   			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -19,7 +24,6 @@
   			<a href="#">Contact</a>
 		</div>
 
-		<img id="imageNav" src="images/navImage.png" onclick="openNav()">
 
 		<div id="main">
 			<header>
@@ -31,8 +35,19 @@
 					</div>
 				</div>
 			</header>
+		
+			<article>
+				<div class="conteneur-images">
+  					<img class="slide" src="images/renault_formule1.jpg">
+  					<img class="slide" src="images/williams_formule1.jpg" style="display:block">
+ 					<img class="slide" src="images/alpine_formule1.jpg">
+ 					<div class="nav-conteneur-images">
+    					<div class="left-arrow" onclick="plusDiv(-1)">&#10094;</div>
+    					<div class="right-arrow" onclick="plusDiv(1)">&#10095;</div>
+    				</div>
+				</div>			
+			</article>
 		</div>
-
 	</body>
 
 </html>

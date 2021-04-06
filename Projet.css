@@ -6,51 +6,62 @@
 	font-style: normal;
 }
 
-
 body
 {
+	height: 100%;
+	width: 100%;
 	background-color : #161616;
 	margin: 0px;
 	padding: 0px;
 }
 
+
+/*NAVIGATION*/
+#imageNavContainer
+{
+	float: left;
+	position: fixed;
+	height: 100%;
+	width: 42px;
+	background-color: black;
+	margin-top: 0px;
+}
+
 #imageNav
 {
-	height : 25px;
-	width: 25px;
-	float : right;
-	margin-right: 30px;
+	height : 30px;
+	width: 30px;
+	float : left;
+	margin-left: 5px;
 }
 
 .sidenav {
-	background-color: #111; 
+	background-color: black;
   	height: 100%;
- 	width: 0%; 
- 	position: fixed; 
- 	z-index: 1; 
+ 	width: 0%;
+ 	position: fixed;
+ 	z-index: 1;
  	top: 0;
  	left: 0;
-  	background-color: #111; 
-  	overflow-x: hidden; 
-  	padding-top: 60px; 
- 	transition: 0.5s; 
+  	overflow-x: hidden;
+  	padding-top: 60px;
+ 	transition: 0.5s;
 }
 
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
+  font-family: 'f1-regular', sans-serif;
   font-size: 25px;
   color: #696969;
   display: block;
   transition: 0.3s;
 }
 
-/* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   color: #f1f1f1;
 }
 
-/* Position and style the close button (top right corner) */
 .sidenav .closebtn {
   position: absolute;
   top: 0;
@@ -59,61 +70,125 @@ body
   margin-left: 50px;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main 
-{
-  	transition: margin-left .5s;
- 	padding: 20px;
- 	padding-top: 0px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+ 	.sidenav {padding-top: 15px;}
+  	.sidenav a {font-size: 18px;}
 }
 
+
+
+
+/*CARTE HEADER*/
+
+header
+{
+	height: 1000px;
+}
 
 .title
 {
 	margin: auto;
+	margin-top: 0px;
 	width: 90%;
 }
 
 .card-holder
 {
-  margin: 2em 0;
+	margin-top: 0px;
 }
 
 .card
 {
-  font-family: 'f1-regular', sans-serif;
-  font-size: 3em;
-  font-weight: 800;
-  height: 4em;
-  width: 64em;
-  padding: 0.5em 1em;
-  border-radius: 0.25em;
-  display: table-cell;
-  vertical-align: middle;
-  letter-spacing: 0px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    font-family: 'f1-regular', sans-serif;
+    font-size: 3em;
+    font-weight: 800;
+    height: 4em;
+    width: 64em;
+    padding: 0.5em 1em;
+    border-radius: 0.25em;
+    display: table-cell;
+    vertical-align: middle;
+    letter-spacing: 0px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .card .subtle
 {
-  color: #000;
-  font-size: 0.5em;
-  font-weight: 400;
-  letter-spacing: 0px;
+    color: #000;
+    font-size: 0.5em;
+    font-weight: 400;
+    letter-spacing: 0px;
 }
 
 .bg-header
 {
 	color: #fff;
-    background: linear-gradient(-70deg, #189CA0 30%, rgba(0, 0, 0, 0) 33%), url('https://f1only.fr/wp-content/uploads/2020/06/EbsdE95WsAAwVQe-scaled.jpg');
+    background: linear-gradient(-70deg, #189CA0 20%, rgba(0, 0, 0, 0) 23%), url('https://f1only.fr/wp-content/uploads/2020/06/EbsdE95WsAAwVQe-scaled.jpg');
   	background-size: cover;
   	background-position: 40% 55%;
   	text-align: right;
 }
 
+
+/*MAIN*/
+#main 
+{
+  	transition: margin-left .5s;
+ 	padding: 50px;
+ 	padding-top: 0px;
+}
+
+.conteneur-images
+{
+	margin-top: 80px;
+	margin-bottom: 20px;
+	margin-left: 5%;
+	margin-right: 5%;
+	position: relative;
+	width: 90%;
+	height: 100%;
+}
+.slide
+{
+	width: 100%;
+	display: none;
+}
+
+.nav-conteneur-images
+{
+	width: 100%;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	text-align: center;
+	font-size: 18px;
+	padding: 0.01em 16px;
+	position: absolute;
+	left: 50%;
+	bottom: 50%;
+	transform: translate(-50%,0%);
+}
+
+.left-arrow
+{
+	float: left;
+}
+
+.right-arrow
+{
+	float: right;
+}
+
+.right-arrow, .left-arrow
+{
+	cursor: pointer;
+}
+
+.right-arrow:hover
+{
+	color: white;
+}
+
+.left-arrow:hover
+{
+	color: white;
+}
