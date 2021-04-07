@@ -9,29 +9,46 @@ function closeNav() {
   document.body.style.backgroundColor = "#161616";
 }
 
-var premImage = 1;
-showDivs(premImage);
 
-function plusDiv(n) {
-  showDivs(premImage += n);
+
+var slideIndex = 2;
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("slide");
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-  if (n > x.length) 
-  	{
-  		premImage = 1;
-  	}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length)
+  { 
+  	slideIndex = 1;
+  }
 
   if (n < 1) 
   {
-  	premImage = x.length;
+  	slideIndex = slides.length;
   }
 
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+  for (i = 0; i < slides.length; i++)
+  {
+      slides[i].style.display = "none";
   }
-  x[premImage-1].style.display = "block";
-}
+
+  for (i = 0; i < dots.length; i++)
+  {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  console.log(slideIndex);
+  console.log(slideIndex-1)
+
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+} 

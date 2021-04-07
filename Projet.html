@@ -7,7 +7,6 @@
 		<title>Formule 1</title>
 		<link rel="stylesheet" type="text/css" href="Projet.css">
 		<script type="text/javascript" src="Projet.js"></script>
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	</head>
 
 	<body>
@@ -37,16 +36,56 @@
 			</header>
 		
 			<article>
+				<div class="articlePress">
+					<h1> Le site </h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.</p>
+
+				</div>
+				<!--
+
 				<div class="conteneur-images">
-  					<img class="slide" src="images/renault_formule1.jpg">
-  					<img class="slide" src="images/williams_formule1.jpg" style="display:block">
+  					<img class="slide" src="images/renault_  					<img class="slide" src="images/williams_formule1.jpg" style="display:block">
  					<img class="slide" src="images/alpine_formule1.jpg">
  					<div class="nav-conteneur-images">
     					<div class="left-arrow" onclick="plusDiv(-1)">&#10094;</div>
     					<div class="right-arrow" onclick="plusDiv(1)">&#10095;</div>
     				</div>
-				</div>			
+				</div>-->
+
+				 <!-- Slideshow container -->
+				<div class="slideshow-container">
+
+  				<!-- Full-width images with number and caption text -->
+  					<div class="mySlides fade ">
+    					<div class="numbertext">1 / 3</div>
+    					<img src="images/renault_formule1.jpg" style="width:100%">
+    					<div class="text">Caption Text</div>
+  					</div>
+
+  					<div class="mySlides fade firstSlide">
+    					<div class="numbertext">2 / 3</div>
+   						<img src="images/williams_formule1.jpg" style="width:100%">
+    					<div class="text">Caption Two</div>
+  					</div>
+
+  					<div class="mySlides fade">
+    					<div class="numbertext">3 / 3</div>
+    					<img src="images/alpine_formule1.jpg" style="width:100%">
+    					<div class="text">Caption Three</div>
+  					</div>
+
+  					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				</div>
+				<br>
+
+				<div style="text-align:center">
+  					<span class="dot" onclick="currentSlide(1)"></span>
+  					<span class="dot" onclick="currentSlide(2)"></span>
+  					<span class="dot" onclick="currentSlide(3)"></span>
+				</div> 			
 			</article>
+
 		</div>
 	</body>
 
