@@ -73,6 +73,7 @@ p
 
 .sidenav a:hover {
   color: #f1f1f1;
+	text-decoration: none;
 }
 
 .sidenav .closebtn {
@@ -81,6 +82,14 @@ p
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+}
+
+.sidenav .serveur{
+
+	padding-bottom: 0px;
+	padding-top: 5px;
+	text-decoration: underline;
+	font-size: 17px;
 }
 
 @media screen and (max-height: 450px) {
