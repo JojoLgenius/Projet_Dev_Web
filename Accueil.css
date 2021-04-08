@@ -141,7 +141,7 @@ p
 
 
 /*MAIN*/
-#main 
+#main
 {
   	transition: margin-left .5s;
  	padding: 50px;
@@ -155,7 +155,7 @@ article h1
 	text-align: center;
 }
 
-article p 
+article p
 {
 	line-height: 25px;
 	text-align: justify;
@@ -228,7 +228,7 @@ article p
 }*/
 
 
-.slideshow-container 
+.slideshow-container
 {
   max-width: 80%;
   position: relative;
@@ -246,7 +246,7 @@ article p
 	display: block;
 }
 
-.prev, .next 
+.prev, .next
 {
   cursor: pointer;
   position: absolute;
@@ -262,20 +262,20 @@ article p
 }
 
 
-.next 
+.next
 {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
 
-.prev:hover, .next:hover 
+.prev:hover, .next:hover
 {
   background-color: rgba(0,0,0,0.8);
 }
 
 
-.text 
+.text
 {
   color: #f2f2f2;
   font-size: 15px;
@@ -286,7 +286,18 @@ article p
   text-align: center;
 }
 
-.numbertext 
+.licence
+{
+  color: #f2f2f2;
+  font-size: 8px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: left;
+}
+
+.numbertext
 {
   color: #f2f2f2;
   font-size: 12px;
@@ -296,7 +307,7 @@ article p
 }
 
 
-.dot 
+.dot
 {
   cursor: pointer;
   height: 15px;
@@ -308,20 +319,19 @@ article p
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover 
+.active, .dot:hover
 {
   background-color: #717171;
 }
 
-.fade 
+.fade
 {
   animation-name: fade;
   animation-duration: 1.5s;
 }
 
-@keyframes fade 
+@keyframes fade
 {
   from {opacity: .3}
   to {opacity: 1}
 }
-
