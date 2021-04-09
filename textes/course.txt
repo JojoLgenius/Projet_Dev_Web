@@ -1,8 +1,8 @@
 #Fichier regroupant les courses de F1
 #jj:mm:aaaa:hh:mm:circuit:pays
-
+#
 28:03:2021:17:00:Circuit International de Sakhir:Bahrein
-18:04:2021:15:00:Autodrome Enzo Dino Ferrari:Italie
+18:04:2021:15:00:Autodrome d'Enzo Ferrari: Italie
 02:05:2021:16:00:Autodrome International d'Algarve:Portugal
 09:06:2021:15:00:Circuit de Barcelone:Espagne
 23:06:2021:15:00:Circuit de Monaco:Monaco
