@@ -27,11 +27,11 @@ function showSlides(n) {
   var dots = document.getElementsByClassName("dot");
 
   if (n > slides.length)
-  { 
+  {
   	slideIndex = 1;
   }
 
-  if (n < 1) 
+  if (n < 1)
   {
   	slideIndex = slides.length;
   }
@@ -51,4 +51,38 @@ function showSlides(n) {
 
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-} 
+}
+
+/*
++---------------------+
+| Partie Nextrace.php |
++---------------------+
+*/
+/*Contient les fonctions utilisés par nextrace.php*/
+
+function chrono(dd,hh,mm,ss){
+  setInterval(function(){
+    if(ss>=0){
+      ss--;
+      document.getElementById('ss').innerHTML=ss+'S</p>';
+      if(ss==0){
+        ss=59;
+        if(mm>=0){
+          mm--;
+        }
+        else{
+          mm=59;
+          if(hh>=00){
+            hh--;
+          }
+          else{
+            hh=24;
+            if(dd>=00){
+              dd--;
+            }
+          }
+        }
+      }
+    }
+  }, 1000);
+}
