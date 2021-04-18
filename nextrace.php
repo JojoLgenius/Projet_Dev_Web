@@ -19,7 +19,7 @@ Le fichier course.txt doit être rédigé comme le précise son utilisation
 
 	<!--
 	La page appelle chrono de Projet.js
-	Elle s'actualise toute les 5min pour éviter d'avoir un retard sur le chrono		
+	Elle s'actualise toute les 5min pour éviter d'avoir un retard sur le chrono
 	-->
   <body onLoad="window.setTimeout('history.go(0)', 300000) ; chrono()">
 		<header>
@@ -56,6 +56,8 @@ Le fichier course.txt doit être rédigé comme le précise son utilisation
 		}
     //Date du jour en France
     date_default_timezone_set("Europe/Paris");
+		//La date actuelle
+		$ajd=time();
     //Ouverture du fichier
 		if($file=fopen("textes/course.txt","r")){
 		// On verifie si la ligne commence par # (commentaires)
@@ -69,16 +71,15 @@ Le fichier course.txt doit être rédigé comme le précise son utilisation
 		do{
     $nextcourse=fgets($file);
     $elemcourse=explode(":",$nextcourse);
-	}while((date(y)>$elemcourse[2]) || (date('Y')==$elemcourse[2] && date('m')>$elemcourse[1])|| (date('Y')>$elemcourse[2] && date('m')>$elemcourse[1] && date('j')>$elemcourse[0]));
-		//deux variables Date
 		//La date de la prochaine course (récupérée dans course.txt)
 		$date_course=strtotime($elemcourse[2].'-'.$elemcourse[1].'-'.$elemcourse[0].' '.$elemcourse[3].':'.$elemcourse[4].':00');
-		//La date actuelle
-		$ajd=time();
+	}while($date_course<$ajd);
+
 		//On calcul la difference avec la date actuelle (exprimé en seconde)
 		$att=abs($date_course-$ajd);
 		//On affiche le temp d'atente avant la prochaine course
 		echo '<div class="attente">';
+		echo '<!--Sec totales : +'.$att.'-->';
 		echo '<p class="it"><em id="dd">'.sstodd($att).'</em>J</p>
 					<p class="it"><em id="hh">'.sstohh($att).'</em>H</p>
 					<p class="it"><em id="mm">'.sstomm($att).'</em>m</p>
