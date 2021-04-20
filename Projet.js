@@ -1,3 +1,4 @@
+//fonctions pour le menu deroulant sur le coté de la page
 function openNav() {
   document.getElementById("mySidenav").style.width = "200px";
   document.getElementById("main").style.marginLeft = "175px";
@@ -11,17 +12,21 @@ function closeNav() {
 
 
 
-var slideIndex = 2;
 
-function plusSlides(n) {
+//fonctions pour les slides d'images 
+var slideIndex = 2; //On commence a la slide 2, SlideIndex est le n°de l'image sur laquelle on se trouve en ce moment si == 1 alors l'image 1 sera présentée
+
+function plusSlides(n) {  //incremente la variable slideIndex en appelant showSlide
   showSlides(slideIndex += n);
 }
 
+
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  showSlides(slideIndex = n); //appelle showSlide
 }
 
-function showSlides(n) {
+
+function showSlides(n) {  
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
@@ -47,7 +52,7 @@ function showSlides(n) {
   }
 
   console.log(slideIndex);
-  console.log(slideIndex-1)
+  console.log(slideIndex-1);
 
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
@@ -119,3 +124,25 @@ function valeur_chrono(){
     }
   }
 }
+
+
+var modal = document.getElementById('inscriptionFen');
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

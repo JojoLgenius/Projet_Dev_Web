@@ -22,7 +22,7 @@
   			<a href="#">Actus</a>
   			<a href="#">Contact</a>
 			<a href="nextrace.php">Prochaine course</a>
-			<a href="connexion/inserer.html" class="serveur">Inscription</a>
+			<a onclick="document.getElementById('inscriptionFen').style.display='block'" class="serveur">Inscription</a>
 			<a href="connexion/rechercher.html" class="serveur">Connexion</a>
 		</div>
 
@@ -81,6 +81,32 @@
 			</article>
 
 		</div>
+
+
+
+		<div id="inscriptionFen" class="modal">
+        	<span onclick="document.getElementById('inscriptionFen').style.display='none'" class="close" title="Close Modal">&times;</span>
+			<form action="connexion/ajouter.php" method="POST" style="border:1px solid #ccc">
+  				<div class="container">
+    				<h1>Inscription</h1>
+    				<p>Remplissez les informations pour vous inscrire</p>
+    				<hr>
+
+    				<label for="nom"><b>Username</b></label><br>
+    				<input type="text" placeholder="Enter Username" name="nom" required><br>
+
+    				<label for="passe"><b>Mot de passe</b></label><br>
+    				<input type="password" placeholder="Enter Password" name="passe" required><br>
+
+    				<label for="pass-repeat"><b>Réécrire le mot de passe</b></label><br>
+    				<input type="password" placeholder="Repeat Password" name="passe-repeat" required><br>
+
+    				<div class="clearfix">
+      					<button type="button" onclick="document.getElementById('inscriptionFen').style.display='none'" class="retourbtn">Retour</button>
+      					<button type="submit" class="inscriptionbtn">S'inscrire</button>
+    				</div>
+  				</div>
+			</form>
 	</body>
 
 </html>
