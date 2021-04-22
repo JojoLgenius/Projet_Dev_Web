@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -8,8 +11,8 @@
       <?php if (isset($_POST['nom']) && isset($_POST['passe'])) 
       {
           $classe = 'membre';
-          $nom = $_POST['nom'];
-          $passe = $_POST['passe'];
+          $nom = htmlspecialchars($_POST['nom']);
+          $passe = password_hash($_POST['passe'], PASSWORD_DEFAULT);
 
           include('connex.inc.php');
           $pdo = connexion('bdd_membre');
@@ -22,18 +25,18 @@
               $stmt->execute();
 
               if ($stmt->rowCount() == 1) {
-                  echo '<p>Ajout effectué</p>';
+                  echo '<p>Ajout effectué</p> <br> <a href="../Accueil.html">Revenir accueil</a>';
               } else {
-                  echo '<p>Erreur</p>';
+                  echo '<p>Erreur</p> <br> <a href="../Accueil.html">Revenir accueil</a>';
               }
           } catch(PDOException $e) {
-              echo '<p>Problème PDO</p>';
+              echo '<p>Problème PDO <br> <a href="../Accueil.html">Revenir accueil</a></p>';
               echo $e->getMessage();
           }
           $stmt->closeCursor();
           $pdo = null;
       } else {
-          echo "<p>Mauvais paramètres</p>";
+          echo '<p>Mauvais paramètres</p> <br> <a href="../Accueil.html">Revenir accueil</a>';
       }?>
   </body>
 </html>

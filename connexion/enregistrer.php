@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -8,8 +11,8 @@
       <?php if (isset($_POST['nom'],$_POST['passe'],$_POST['id'])) {
           $classe = 'membre';
           $id = $_POST['id'];
-          $nom = $_POST['nom'];
-          $passe = $_POST['passe'];
+          $nom = htmlspecialchars($_POST['nom']);
+          $passe = password_hash($_POST['passe'], PASSWORD_DEFAULT);
 
           include('connex.inc.php');
           $pdo = connexion('bdd_membre');

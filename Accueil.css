@@ -1,3 +1,9 @@
+
+* 
+{
+  box-sizing: border-box;
+}
+
 @font-face {
 	font-family: 'f1-regular';
 	src: local(Formula1 Display Regular),
@@ -8,6 +14,7 @@
 
 body
 {
+	font-family: 'f1-regular', sans-serif;
 	height: 100%;
 	width: 100%;
 	background-color : #161616;
@@ -17,14 +24,12 @@ body
 
 h1
 {
-	font-family: 'f1-regular', sans-serif;
 	font-size: 50px;
 	color: #fff;
 }
 
 p
 {
-	font-family: 'f1-regular', sans-serif;
 	color: #fff ;
 }
 
@@ -149,6 +154,7 @@ p
 }
 
 
+
 /*MAIN*/
 #main
 {
@@ -173,6 +179,7 @@ article p
   margin-bottom: 150px;
 }
 
+/*IMAGES SLIDES*/
 
 .slideshow-container
 {
@@ -283,13 +290,13 @@ article p
 }
 
 
+/* FENETRES DE CONNEXION/INSCRIPTION */
 
 
 
-
-input[type=text], input[type=password] 
+input[type=text], input[type=password]
 {
-  width: 50%;
+  width: 80%;
   padding: 15px;
   margin: 5px 0 22px 0;
   display: inline-block;
@@ -297,7 +304,7 @@ input[type=text], input[type=password]
   background: #f1f1f1;
 }
 
-input[type=text]:focus, input[type=password]:focus 
+input[type=text]:focus,input[type=password]:focus
 {
   background-color: #ddd;
   outline: none;
@@ -308,7 +315,7 @@ hr {
   margin-bottom: 25px;
 }
 
-button 
+button
 {
   background-color: #4CAF50;
   color: white;
@@ -320,64 +327,59 @@ button
   opacity: 0.9;
 }
 
-button:hover 
+button:hover
 {
   opacity:1;
 }
 
-
-.retourbtn 
+.retourbtn
 {
   padding: 14px 20px;
   background-color: #f44336;
 }
 
-
-.retourbtn, .inscriptionbtn 
+.retourbtn,.inscriptionbtn
 {
   float: left;
   width: 40%;
 }
 
-
-.container 
+.container
 {
   margin : auto;
   padding: 16px;
 }
 
-
-.clearfix::after 
+.clearfix::after
 {
   content: "";
   clear: both;
   display: table;
 }
 
-.modal {  
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
+.modal
+{
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: #474e5d;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #161616;
   padding-top: 50px;
 }
 
-
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; 
-  border: 1px solid #888;
-  width: 60%; 
+.modal-content
+{
+  background-color: black;
+  margin: 5% auto 15% auto;
+  width: 60%;
+  color: white;
 }
 
-
-
-@media screen and (max-width: 300px) 
+@media screen and (max-width: 300px)
 {
   .retourbtn, .inscriptionbtn {
     width: 100%;
