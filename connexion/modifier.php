@@ -33,16 +33,16 @@ session_start();
 </form>
 <?php
               } else {
-                  echo '<p>Membre⋅s non trouvé⋅e</p> <br> <a href="../Accueil.html">Revenir accueil</a>';
+                  echo '<p>Membre⋅s non trouvé⋅e</p> <br> <a href="../Accueil.php">Revenir accueil</a>';
               }
               $stmt->closeCursor();
               $pdo = null;
           } catch(PDOException $e) {
-              echo '<p>Problème PDO</p> <br> <a href="../Accueil.html">Revenir accueil</a>';
+              echo '<p>Problème PDO</p> <br> <a href="../Accueil.php">Revenir accueil</a>';
               echo $e->getMessage();
           }
       } else {
-          echo '<p>Mauvais paramètres</p> <br> <a href="../Accueil.html">Revenir accueil</a>';
+          echo '<p>Mauvais paramètres</p> <br> <a href="../Accueil.php">Revenir accueil</a>';
       }?>
   </body>
 </html>

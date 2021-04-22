@@ -26,18 +26,18 @@ session_start();
               $stmt->execute();
 
               if ($stmt->rowCount() == 1) {
-                  echo '<p>Modification effectuée</p>';
+                  echo '<p>Modification effectuée</p> <br> <a href="../Accueil.php">Revenir accueil</a>';
               } else {
-                  echo '<p>Erreur</p>';
+                  echo '<p>Erreur</p> <br> <a href="../Accueil.php">Revenir accueil</a>' ;
               }
           } catch(PDOException $e) {
-              echo '<p>Problème PDO</p>';
+              echo '<p>Problème PDO</p> <br> <a href="../Accueil.php">Revenir accueil</a>';
               echo $e->getMessage();
           }
           $stmt->closeCursor();
           $pdo = null;
       } else {
-          echo "<p>Mauvais paramètres</p>";
+          echo '<p>Mauvais paramètres</p> <br> <a href="../Accueil.php">Revenir accueil</a>';
       }?>
   </body>
 </html>

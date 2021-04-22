@@ -35,7 +35,7 @@ if (isset($_POST['nom']) && isset($_POST['passe']))
 	$passeOk = password_verify($passe,$resultat['passe']);
 
 	if (!$resultat){
-		echo 'Mauvais id ou mot de passe ! de resultat <br> <a href="../Accueil.html">Revenir accueil</a>';
+		echo 'Mauvais id ou mot de passe ! de resultat <br> <a href="../Accueil.php">Revenir accueil</a>';
 	}
 
 	else {
@@ -43,17 +43,17 @@ if (isset($_POST['nom']) && isset($_POST['passe']))
 			$_SESSION['id'] = $resultat['id'];
 			$_SESSION['nom'] = $nom; 
 			$_SESSION['classe'] = $resultat['classe'];
-			echo 'Vous etes connecté ! <br> <a href="../Accueil.html">Revenir accueil</a>';
+			echo 'Vous etes connecté ! <br> <a href="../Accueil.php">Revenir accueil</a>';
 		}
 		else {
-			echo 'Mauvais id ou mot de passe ! de passOk <br> <a href="../Accueil.html">Revenir accueil</a>';
+			echo 'Mauvais id ou mot de passe ! de passOk <br> <a href="../Accueil.php">Revenir accueil</a>';
 		}
 	}
  
     $stmt->closeCursor();
     $pdo = null;
 } else {
-	echo 'Mauvais paramètres <br> <a href="../Accueil.html">Revenir accueil</a>';
+	echo 'Mauvais paramètres <br> <a href="../Accueil.php">Revenir accueil</a>';
 }
 ?>
 

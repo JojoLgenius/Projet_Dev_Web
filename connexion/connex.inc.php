@@ -14,7 +14,7 @@ function connexion($base){
       }
   }
   catch(PDOException $e) {
-      echo 'Problème à la connexion <br> <a href="../Accueil.html">Revenir accueil</a>';
+      echo 'Problème à la connexion <br> <a href="../Accueil.php">Revenir accueil</a>';
       die();
   }
   return $pdo;

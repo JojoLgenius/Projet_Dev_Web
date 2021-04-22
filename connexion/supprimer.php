@@ -18,15 +18,15 @@ session_start();
               $stmt = $pdo->prepare("DELETE FROM membres WHERE id = :id");
               $stmt->bindParam(':id', $id);
               $stmt->execute();
-              echo '<p>'.($stmt->rowCount()).' membre⋅s supprimé⋅e(s)</p> <br> <a href="../Accueil.html">Revenir accueil</a>';
+              echo '<p>'.($stmt->rowCount()).' membre⋅s supprimé⋅e(s)</p> <br> <a href="../Accueil.php">Revenir accueil</a>';
               $stmt->closeCursor();
               $pdo = null;
           } catch(PDOException $e) {
-              echo '<p>Problème PDO</p> <br> <a href="../Accueil.html">Revenir accueil</a>';
+              echo '<p>Problème PDO</p> <br> <a href="../Accueil.php">Revenir accueil</a>';
               echo $e->getMessage();
           }
       } else {
-          echo "<p>Mauvais paramètres</p> <br> <a href='../Accueil.html'>Revenir accueil</a>";
+          echo "<p>Mauvais paramètres</p> <br> <a href='../Accueil.php'>Revenir accueil</a>";
       }?>
   </body>
 </html>
