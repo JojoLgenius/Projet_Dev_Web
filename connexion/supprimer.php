@@ -6,8 +6,10 @@ session_start();
   <head>
     <meta charset="utf-8">
     <title>Suppression</title>
+    <link rel="stylesheet" type="text/css" href="OUIOUIOUI.css">
   </head>
   <body>
+    <center>
       <?php if (isset($_GET['id'])) {
 
           $id = intval($_GET['id']);
@@ -18,15 +20,17 @@ session_start();
               $stmt = $pdo->prepare("DELETE FROM membres WHERE id = :id");
               $stmt->bindParam(':id', $id);
               $stmt->execute();
-              echo '<p>'.($stmt->rowCount()).' membre⋅s supprimé⋅e(s)</p> <br> <a href="../Accueil.php">Revenir accueil</a>';
+              echo '<h1>'.($stmt->rowCount()).' membre⋅s supprimé</h1> <br> <a href="../Accueil.php">Revenir accueil</a>';
               $stmt->closeCursor();
               $pdo = null;
           } catch(PDOException $e) {
-              echo '<p>Problème PDO</p> <br> <a href="../Accueil.php">Revenir accueil</a>';
+              echo '<h1>Problème PDO</h1> <br> <a href="../Accueil.php">Revenir accueil</a>';
               echo $e->getMessage();
           }
       } else {
-          echo "<p>Mauvais paramètres</p> <br> <a href='../Accueil.php'>Revenir accueil</a>";
+          echo "<h1>Mauvais paramètres</h1> <br> <a href='../Accueil.php'>Revenir accueil</a>";
       }?>
+    </center>
+    <meta http-equiv="refresh" content="2; url=../Accueil.php" />
   </body>
 </html>

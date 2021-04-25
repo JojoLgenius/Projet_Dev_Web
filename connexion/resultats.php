@@ -6,6 +6,7 @@ session_start();
   <head>
     <meta charset="utf-8">
     <title>Résultats</title>
+    <link rel="stylesheet" type="text/css" href="OUIOUIOUI.css">
   </head>
   <body>
     <?php 
@@ -30,22 +31,22 @@ session_start();
             $req->execute();
 
             $membres = $req->fetchAll(PDO::FETCH_ASSOC);
-            echo '<p>'.count($membres).' membres.s correspondent à votre requête :</p>';
+            echo '<h1>'.count($membres).' membres.s correspondent à votre requête :</h1>';
             echo '<ul>';
 
             foreach($membres as $membres) {
                 // echo "<li>${etudiant['nom']} ${etudiant['age']} ${etudiant['filiere']}</li>";
-                echo '<li>'.$membres['classe'].' '.$membres['nom'].' '.$membres['passe'].'  <a href="supprimer.php?id='.$membres['id'].'">supprimer</a> <a href="modifier.php?id='.$membres['id'].'">modifier</a></li>';
+                echo '<li> classe : '.$membres['classe'].' <br>nom : '.$membres['nom'].' <br>mdp : '.$membres['passe'].'<br> <a href="supprimer.php?id='.$membres['id'].'">supprimer</a> <a href="modifier.php?id='.$membres['id'].'">modifier</a></li> <br>';
             }
             echo '</ul> <br> <a href="../Accueil.php">Revenir accueil</a>';
             $req->closeCursor();
             $pdo = null;
         } catch(PDOException $e) {
             echo $e->getMessage();
-            echo '<p>Problème avec la base</p> <br> <a href="../Accueil.php">Revenir accueil</a>';
+            echo '<h1>Problème avec la base</h1> <br> <a href="../Accueil.php">Revenir accueil</a>';
         }
     } else {
-        echo '<p>Critères de recherche non spécifiés, <a href="rechercher.php">retournez sur le formulaire.</a></p>';
+        echo '<h1>Critères de recherche non spécifiés </h1> <a href="../Accueil.php">retournez a l\'accueil</a>';
     } ?>
   </body>
 </html>

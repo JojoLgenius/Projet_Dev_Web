@@ -6,8 +6,10 @@ session_start();
   <head>
     <meta charset="utf-8">
     <title>Modification</title>
+    <link rel="stylesheet" type="text/css" href="OUIOUIOUI.css">
   </head>
   <body>
+    <center>
       <?php if (isset($_GET['id'])) {
           $id = intval($_GET['id']);
 
@@ -20,29 +22,33 @@ session_start();
               $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
               if (count($results) > 0) {
                   $result = $results[0];
-                  echo '<p>Membre⋅s '.$id.'</p>';
-?>
-<form action="enregistrer.php" method="POST">
-    <label>Username : <input type="text" name="nom" value="<?php echo $result['nom']; ?>"></label>
+                  echo '<h1>Modifications membre '.$id.':</h1> <br>';
+              ?>
 
-    <label>Mot de passe : <input type="text" name="passe" value="<?php echo $result['passe']; ?>"></label>
 
-    <input type="hidden" name="id" value="<?php echo $result['id']; ?>">
+      <form action="enregistrer.php" method="POST">
+          <label>Username : <input type="text" name="nom" value="<?php echo $result['nom']; ?>"></label>
+
+          <label>Mot de passe : <input type="text" name="passe" value="<?php echo $result['passe']; ?>"></label>
+
+          <input type="hidden" name="id" value="<?php echo $result['id']; ?>">
     
-    <button type="submit">Modifier</button>
-</form>
-<?php
+          <button type="submit">Modifier</button>
+      </form>
+
+
+          <?php
               } else {
-                  echo '<p>Membre⋅s non trouvé⋅e</p> <br> <a href="../Accueil.php">Revenir accueil</a>';
+                  echo '<h1>Membre⋅s non trouvé⋅e</h1> <br> <a href="../Accueil.php">Revenir accueil</a>';
               }
               $stmt->closeCursor();
               $pdo = null;
           } catch(PDOException $e) {
-              echo '<p>Problème PDO</p> <br> <a href="../Accueil.php">Revenir accueil</a>';
+              echo '<h1>Problème PDO</h1> <br> <a href="../Accueil.php">Revenir accueil</a>';
               echo $e->getMessage();
           }
       } else {
-          echo '<p>Mauvais paramètres</p> <br> <a href="../Accueil.php">Revenir accueil</a>';
+          echo '<h1>Mauvais paramètres</h1> <br> <a href="../Accueil.php">Revenir accueil</a>';
       }?>
   </body>
 </html>

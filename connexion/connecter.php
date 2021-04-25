@@ -7,14 +7,10 @@ session_start();
   <head>
     <meta charset="utf-8">
     <title>Enregistrement</title>
-    <style type="text/css"> 
-    body { 
-    	background-color : black; 
-    	color : white;
-    }
-	</style>
+    <link rel="stylesheet" type="text/css" href="OUIOUIOUI.css">
   </head>
   <body>
+  	<center>
 
 <?php
 if (isset($_POST['nom']) && isset($_POST['passe']))
@@ -35,7 +31,7 @@ if (isset($_POST['nom']) && isset($_POST['passe']))
 	$passeOk = password_verify($passe,$resultat['passe']);
 
 	if (!$resultat){
-		echo 'Mauvais id ou mot de passe ! de resultat <br> <a href="../Accueil.php">Revenir accueil</a>';
+		echo '<h1>Mauvais id ou mot de passe ! de resultat</h1> <br> <a href="../Accueil.php">Revenir accueil</a>';
 	}
 
 	else {
@@ -43,19 +39,21 @@ if (isset($_POST['nom']) && isset($_POST['passe']))
 			$_SESSION['id'] = $resultat['id'];
 			$_SESSION['nom'] = $nom; 
 			$_SESSION['classe'] = $resultat['classe'];
-			echo 'Vous etes connecté ! <br> <a href="../Accueil.php">Revenir accueil</a>';
+			echo '<h1>Vous etes connecté !</h1> <br> <a href="../Accueil.php">Revenir accueil</a>';
 		}
 		else {
-			echo 'Mauvais id ou mot de passe ! de passOk <br> <a href="../Accueil.php">Revenir accueil</a>';
+			echo '<h1>Mauvais id ou mot de passe ! de passOk</h1> <br> <a href="../Accueil.php">Revenir accueil</a>';
 		}
 	}
  
     $stmt->closeCursor();
     $pdo = null;
 } else {
-	echo 'Mauvais paramètres <br> <a href="../Accueil.php">Revenir accueil</a>';
+	echo '<h1>Mauvais paramètres</h1> <br> <a href="../Accueil.php">Revenir accueil</a>';
 }
 ?>
 
-</body>
+		<meta http-equiv="refresh" content="2; url=../Accueil.php" />
+		</center>
+	</body>
 </html>

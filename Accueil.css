@@ -97,6 +97,13 @@ p
 	font-size: 17px;
 }
 
+.sidenav .serveurInfo {
+  color: #f1f1f1;
+  padding-bottom: 0px;
+  padding-top: 5px;
+  font-size: 18px;
+}
+
 @media screen and (max-height: 450px) {
  	.sidenav {padding-top: 15px;}
   	.sidenav a {font-size: 18px;}

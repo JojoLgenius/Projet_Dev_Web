@@ -19,18 +19,37 @@ session_start();
 			<img id="imageNav" src="images/navImage.png" alt="menu" onclick="openNav()">
 	    </div>
 
-		<div id="mySidenav" class="sidenav">
-  		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  		<a href="Accueil.html">Accueil</a>
+		<div id="mySidenav" class="sidenav"> 		
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+      <?php 
+      if (isset($_SESSION['id']) AND isset($_SESSION['nom']) AND isset($_SESSION['classe'])){
+        if ($_SESSION['classe'] == 'admin' ){
+          echo "<a class='serveurInfo'>Connecté " . $_SESSION['nom'] . "</a><a class='serveurInfo'>" . $_SESSION['classe'] . "</a><br>" ;
+        } else {
+          echo "<a class='serveurInfo'>Connecté " . $_SESSION['nom'] . "</a><a class='serveurInfo'>" . $_SESSION['classe'] . "</a><br>";
+        }
+      } else {
+        echo "<a class='serveurInfo'>Non connecté</a>";
+      }
+      ?>
+
+      <br>
+
+  		<a href="Accueil.php">Accueil</a>
   		<a href="Blog.php">Blog</a>
   		<a href="#">Actus</a>
   		<a href="#">Contact</a>
 			<a href="nextrace.php">Prochaine course</a>
 
+     <br>
+     <br>
+
 
       <a onclick="document.getElementById('adminFen').style.display='block'" class='serveur'>Gérer membres</a>
       <a onclick="document.getElementById('inscriptionFen').style.display='block'" class='serveur'>Inscription</a>
       <a onclick="document.getElementById('connexionFen').style.display='block'" class='serveur'>Connexion</a>
+      <a href='connexion/deconnexion.php' class='serveur'>Deconnexion</a>
 
 		</div>
 
