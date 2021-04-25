@@ -25,9 +25,9 @@ session_start();
       <?php 
       if (isset($_SESSION['id']) AND isset($_SESSION['nom']) AND isset($_SESSION['classe'])){
         if ($_SESSION['classe'] == 'admin' ){
-          echo "<a class='serveurInfo'>Connecté " . $_SESSION['nom'] . "</a><a class='serveurInfo'>" . $_SESSION['classe'] . "</a><br>" ;
+          echo "<a class='serveurInfo'>". $_SESSION['classe'] ." ". $_SESSION['nom'] ."</a><a class='serveurInfo'> Connecté</a><br>" ;
         } else {
-          echo "<a class='serveurInfo'>Connecté " . $_SESSION['nom'] . "</a><a class='serveurInfo'>" . $_SESSION['classe'] . "</a><br>";
+          echo "<a class='serveurInfo'>". $_SESSION['classe'] ." ". $_SESSION['nom'] ."</a><a class='serveurInfo'> Connecté</a><br>" ;
         }
       } else {
         echo "<a class='serveurInfo'>Non connecté</a>";
@@ -42,14 +42,32 @@ session_start();
   		<a href="#">Contact</a>
 			<a href="nextrace.php">Prochaine course</a>
 
-     <br>
-     <br>
+      <br>
+      <br>
 
 
-      <a onclick="document.getElementById('adminFen').style.display='block'" class='serveur'>Gérer membres</a>
-      <a onclick="document.getElementById('inscriptionFen').style.display='block'" class='serveur'>Inscription</a>
-      <a onclick="document.getElementById('connexionFen').style.display='block'" class='serveur'>Connexion</a>
-      <a href='connexion/deconnexion.php' class='serveur'>Deconnexion</a>
+      <?php
+
+      if (isset($_SESSION['id']) AND isset($_SESSION['nom']) AND isset($_SESSION['classe'])){
+        if ($_SESSION['classe'] == 'admin'){
+          echo <<<END
+          <a onclick="document.getElementById('adminFen').style.display='block'" class='serveur'>Gérer membres</a>
+          END;
+
+          echo "<a href='connexion/deconnexion.php' class='serveur'>Deconnexion</a>";
+
+        } else {
+          echo "<a href='connexion/deconnexion.php' class='serveur'>Deconnexion</a>";
+        }
+      } else {
+        echo <<<END
+        <a onclick="document.getElementById('connexionFen').style.display='block'" class='serveur'>Connexion</a>
+        END;
+        echo <<<END
+        <a onclick="document.getElementById('inscriptionFen').style.display='block'" class='serveur'>Inscription</a> 
+        END;
+      }
+      ?>
 
 		</div>
 
@@ -71,6 +89,11 @@ session_start();
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.</p>
 
 				</div>
+
+
+
+
+
 
 				<div class="slideshow-container">
 
@@ -108,11 +131,6 @@ session_start();
 			</article>
 
 		</div>
-
-
-
-
-
 
 
 		<div id="inscriptionFen" class="modal">
