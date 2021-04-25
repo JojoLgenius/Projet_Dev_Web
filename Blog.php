@@ -1,12 +1,13 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
-
 <html lang="fr">
-
 	<head>
 		<meta charset="utf-8">
 		<title>Blog</title>
 	</head>
-
-  <body>
-  </body>
+ 	<body>
+ 	</body>
 </html>

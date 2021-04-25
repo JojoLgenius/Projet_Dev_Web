@@ -9,7 +9,7 @@ session_start();
 	<head>
 		<meta charset="utf-8">
 		<title>deconnexion</title>
-		<link rel="stylesheet" type="text/css" href="OUIOUIOUI.css">
+		<link rel="stylesheet" type="text/css" href="StylePartieConnexion.css">
 	</head>
 	<body>
 
