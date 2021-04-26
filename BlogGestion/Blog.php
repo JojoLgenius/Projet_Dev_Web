@@ -19,6 +19,7 @@ session_start();
  						
  					}
  				}
+				?>
  			</header>
 
 			<?php
