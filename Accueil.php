@@ -37,7 +37,7 @@ session_start();
       <br>
 
   		<a href="Accueil.php">Accueil</a>
-  		<a href="Blog.php">Blog</a>
+  		<a href="BlogGestion/Blog.php">Blog</a>
   		<a href="#">Actus</a>
   		<a href="#">Contact</a>
 			<a href="nextrace.php">Prochaine course</a>
