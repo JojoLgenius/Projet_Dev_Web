@@ -54,10 +54,10 @@ session_start();
           <a onclick="document.getElementById('adminFen').style.display='block'" class='serveur'>Gérer membres</a>
           END;
 
-          echo "<a href='connexion/deconnexion.php' class='serveur'>Deconnexion</a>";
+          echo "<a href='ConnexionGestion/deconnexion.php' class='serveur'>Deconnexion</a>";
 
         } else {
-          echo "<a href='connexion/deconnexion.php' class='serveur'>Deconnexion</a>";
+          echo "<a href='ConnexionGestion/deconnexion.php' class='serveur'>Deconnexion</a>";
         }
       } else {
         echo <<<END
@@ -135,20 +135,20 @@ session_start();
 
 		<div id="inscriptionFen" class="modal">
         	<span onclick="document.getElementById('inscriptionFen').style.display='none'" class="close" title="Close Modal">&times;</span>
-			<form class="modal-content" action="connexion/ajouter.php" method="POST" style="border:1px solid #ccc">
+			<form class="modal-content" action="ConnexionGestion/ajouter.php" method="POST" style="border:1px solid #ccc">
   				<div class="container">
     				<h1>Inscription</h1>
     				<p>Remplissez les informations pour vous inscrire</p>
     				<hr>
 
     				<label for="nom"><b>Username</b></label><br>
-    				<input type="text" placeholder="Enter Username" name="nom" required><br>
+    				<input type="text" placeholder="Entrer Username" name="nom" required><br>
 
     				<label for="passe"><b>Mot de passe</b></label><br>
-    				<input type="password" placeholder="Enter Password" name="passe" required><br>
+    				<input type="password" placeholder="Mot de passe" name="passe" required><br>
 
     				<label for="pass-repeat"><b>Réécrire le mot de passe</b></label><br>
-    				<input type="password" placeholder="Repeat Password" name="passe-repeat" required><br>
+    				<input type="password" placeholder="Repéter mot de passe" name="passe-repeat" required><br>
 
     				<div class="clearfix">
       					<button type="button" onclick="document.getElementById('inscriptionFen').style.display='none'" class="retourbtn">Retour</button>
@@ -161,7 +161,7 @@ session_start();
 
 		<div id="connexionFen" class="modal">
         	<span onclick="document.getElementById('connexionFen').style.display='none'" class="close" title="Close Modal">&times;</span>
-			<form class="modal-content" action="connexion/connecter.php" method="POST" style="border:1px solid #ccc">
+			<form class="modal-content" action="ConnexionGestion/connecter.php" method="POST" style="border:1px solid #ccc">
   				<div class="container">
     				<h1>Connexion</h1>
     				<p>Remplissez pour la connexion</p>
@@ -171,7 +171,7 @@ session_start();
     				<input type="text" placeholder="Entrer Username" name="nom" required>
     				<br>
             <label for="passe"><b>Mot de passe</b></label><br>
-            <input type="text" placeholder="Entrer Mdp" name="passe" required>
+            <input type="text" placeholder="Entrer mot de passe" name="passe" required>
             <br>
 
     				<div class="clearfix">
@@ -184,7 +184,7 @@ session_start();
 
     <div id="adminFen" class="modal">
           <span onclick="document.getElementById('adminFen').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <form class="modal-content" action="connexion/resultats.php" method="POST" style="border:1px solid #ccc">
+      <form class="modal-content" action="ConnexionGestion/resultats.php" method="POST" style="border:1px solid #ccc">
           <div class="container">
             <h1>Connexion</h1>
             <p>Remplissez pour la connexion</p>
