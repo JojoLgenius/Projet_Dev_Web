@@ -368,7 +368,7 @@ button:hover
 
 .retourbtn,.inscriptionbtn
 {
-  float: left;
+  float: center;
   width: 40%;
 }
 

@@ -15,26 +15,27 @@ session_start();
  			<?php
  			if (isset($_SESSION['id']) AND isset($_SESSION['nom']) AND isset($_SESSION['classe'])){
  				if ($_SESSION['classe'] == 'admin' ){
-
  					include('../ConnexionGestion/connex.inc.php');
 					$pdo = connexion('bdd_membre');
 
- 					echo "<a href='NouvArt.php'>Faire un nouvel Article</a>";
- 					echo "<br><br>";
+					echo '<br><br>';
  					echo "<h1> Liste Articles </h1>";
+ 					echo "<a href='NouvArt.php'>Faire un nouvel Article</a>";
 
  					try {
- 						$stmt = $pdo->prepare("SELECT * FROM articles");
+ 						$stmt = $pdo->prepare("SELECT * FROM articles ORDER BY date_article DESC");
  						$stmt->execute();
  						$articles = $stmt->fetchAll(PDO::FETCH_ASSOC);
  						echo '<h2>'.count($articles).' articles</h1>';
  						echo '<ul>';
  						echo '</center>';
  						foreach($articles as $articles){
- 							echo '<li> Titre : '.$articles['titre'].' <br> <a href="supprimerArt.php?id='.$articles['id'].'">supprimer</a></li><br>';
+ 							echo '<li> Titre : '.$articles['titre'].'<br> Date : '.$articles['date_article'].' <br> <a href="suppArt.php?id='.$articles['id'].'">supprimer</a></li><br>';
 
  						}
  						echo '</ul>';
+
+ 						echo "<br><br><a href='../Blog.php' style='margin-left: 100px'>Retour au blog</a>";
  					}
  					catch(PDOException $e) {
             			echo '<h1>Problème PDO</h1> <br> <a href="../Accueil.php">Revenir accueil</a>';
@@ -43,11 +44,16 @@ session_start();
 
  				}
  				else {
- 					echo "<h1>Vous n'etes pas autorisé</h1>";
+ 					echo "<h1>Vous n'etes pas autorisé</h1>";?>
+ 					<meta http-equiv="refresh" content="2; url=../Blog.php" />
+ 					<?php
  				}
  			}
  			else {
  				echo "<h1>Vous n'etes pas autorisé</h1>";
+ 				?>
+ 				<meta http-equiv="refresh" content="2; url=../Blog.php" />
+ 				<?php
  			}
  			?>
  	</body>
