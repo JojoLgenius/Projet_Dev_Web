@@ -3,14 +3,14 @@
   box-sizing: border-box;
 }
 
-@font-face {
+@font-face { /* La police d'ecriture */
   font-family: 'f1-regular';
   src:url('polices/Formula1-Regular.otf');
   font-weight: normal;
   font-style: normal;
 }
 
-body
+body  /*petites choses essentielles*/ 
 {
 	font-family: 'f1-regular', sans-serif;
 	height: 100%;
@@ -33,10 +33,14 @@ p
 }
 
 
+
+
+
+
 /*NAVIGATION*/
-#imageNavContainer
+#imageNavContainer 
 {
-	float: left;
+	float: left; 
 	position: fixed;
 	height: 100%;
 	width: 42px;
@@ -52,56 +56,54 @@ p
 	margin-left: 5px;
 }
 
-.sidenav 
+.sidenav   /* La bare de navigation*/
 {
 	background-color: black;
-  	height: 100%;
+  height: 100%;
  	width: 0%;
  	position: fixed;
- 	z-index: 1;
+ 	z-index: 1;  /* pour faire en cascade */
  	top: 0;
  	left: 0;
-  	overflow-x: hidden;
-  	padding-top: 60px;
- 	transition: 0.5s;
+  overflow-x: hidden; /* pour cacher ce qui pourrait dépasser de la barre meme si ca ne peut pas normalement */ 
+  padding-top: 60px;
+ 	transition: 0.5s;  /* pour faire un effet de glissement */
 }
 
-.sidenav a 
+.sidenav a   /* texte dans la barre de navigation */ 
 {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-family: 'f1-regular', sans-serif;
   font-size: 25px;
   color: #696969;
   display: block;
   transition: 0.3s;
 }
 
-.sidenav a:hover 
+.sidenav a:hover  /*couleur du texte en hover dans la bare de navigation*/
 {
-  color: #f1f1f1;
+  color: #f1f1f1; 
 	text-decoration: none;
 }
 
 .sidenav .closebtn 
 {
-  position: absolute;
+  position: absolute; /* le bouton de fermeture de la barre */
   top: 0;
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
 }
 
-.sidenav .serveur
+.sidenav .serveur  /* le texte special de connexion */
 {
-
 	padding-bottom: 0px;
 	padding-top: 5px;
 	text-decoration: underline;
 	font-size: 17px;
 }
 
-.sidenav .serveurInfo 
+.sidenav .serveurInfo /* le texte special d'etat de connexion */
 {
   color: #f1f1f1;
   padding-bottom: 0px;
@@ -109,17 +111,18 @@ p
   font-size: 18px;
 }
 
-@media screen and (max-height: 450px) 
+@media screen and (max-height: 450px)  /*on adapte un petit peu pas grand chose la barre de navigation et son texte si l'ecran est trop petit */
 {
  	.sidenav {padding-top: 15px;}
-  	.sidenav a {font-size: 18px;}
+  .sidenav a {font-size: 18px;}
 }
 
 
 
 
-/*CARTE HEADER*/
 
+
+/*CARTE HEADER*/
 
 .title
 {
@@ -137,22 +140,22 @@ p
 .card
 {
     font-family: 'f1-regular', sans-serif;
-    font-size: 3em;
+    font-size: 48px;
     font-weight: 800;
-    height: 4em;
-    width: 64em;
-    padding: 0.5em 1em;
-    border-radius: 0.25em;
+    height: 64px;
+    width: 1024px;
+    padding: 8px 16px; 
+    border-radius: 4px;
     display: table-cell;
     vertical-align: middle;
     letter-spacing: 0px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);  /*ombre*/
 }
 
 .card .subtle
 {
     color: #000;
-    font-size: 0.5em;
+    font-size: 8px;
     font-weight: 400;
     letter-spacing: 0px;
 }
@@ -165,6 +168,10 @@ p
   	background-position: 40% 55%;
   	text-align: right;
 }
+
+
+
+
 
 
 
@@ -191,6 +198,14 @@ article p
 	margin-left: 100px;
   margin-bottom: 150px;
 }
+
+
+
+
+
+
+
+
 
 /*IMAGES SLIDES*/
 
@@ -227,19 +242,16 @@ article p
   user-select: none;
 }
 
-
 .next
 {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-
 .prev:hover, .next:hover
 {
   background-color: rgba(0,0,0,0.8);
 }
-
 
 .text
 {
@@ -272,7 +284,6 @@ article p
   top: 0;
 }
 
-
 .dot
 {
   cursor: pointer;
@@ -303,8 +314,12 @@ article p
 }
 
 
-/* FENETRES DE CONNEXION/INSCRIPTION */
 
+
+
+
+
+/* FENETRES DE CONNEXION/INSCRIPTION */
 
 
 input[type=text], input[type=password]
