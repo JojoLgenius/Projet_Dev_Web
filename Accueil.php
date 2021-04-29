@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+/* !!!! ATTENTION : Si probleme de SQL regarder dans connex.inc.php  et   param.inc.php c'est surrement de là que vient le probleme !!!!!!*/
 ?>
 
 
