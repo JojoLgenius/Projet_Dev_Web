@@ -2,9 +2,8 @@
 function connexion($base){
   include_once("param.inc.php");
   try {
-  		/*aller voir param.inc.php pour changer les parametres de connexion a PDO */
-  
-	   $base = 'rs05379t';  /*mettre en commentaire si connexion sur MAMP/WAMP (option que pour WEBETU) */
+	  /*aller voir param.inc.php pour changer les parametres de connexion a PDO */
+	  /*$base = 'rs05379t';  mettre en commentaire si connexion sur MAMP/WAMP ET besoin de mettre son nom d'utilisateur la c'est le mien (option que pour WEBETU) */
   
       $pdo = new PDO('mysql:host='.HOTE.'; dbname='.$base.'; charset=utf8',UTILISATEUR,PASSE);
       $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
