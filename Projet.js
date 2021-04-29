@@ -11,8 +11,6 @@ function closeNav() {
 }
 
 
-
-
 //fonctions pour les slides d'images 
 var slideIndex = 2; //On commence a la slide 2, SlideIndex est le n°de l'image sur laquelle on se trouve en ce moment si == 1 alors l'image 1 sera présentée
 
@@ -130,6 +128,7 @@ var modal = document.getElementById('inscriptionFen');
 var modal2 = document.getElementById('connexionFen');
 var modal3 = document.getElementById('adminFen');
 
+
 window.onclick = function(event) {
   if (event.target == modal || event.target == modal2 || event.target == modal3) {
     modal.style.display = "none";
@@ -139,6 +138,30 @@ window.onclick = function(event) {
 }
 
 
+function showPasse(x) {
+	var elem1 = document.getElementById("passe-bar1");
+	var elem2 = document.getElementById("passe-bar2");
+	var elem3 = document.getElementById("passe-bar3");
+	
+	if (x == 1){
+		if (elem1.type === "password") {
+    		elem1.type = "text";
+    		elem2.type = "text";
+  		}
+  		else {
+	 	elem1.type = "password";
+	 	elem2.type = "password";
+  		}
+  }
+  else {
+		if (elem3.type === "password") {
+    		elem3.type = "text";
+  		}
+  		else {
+	 	elem3.type = "password";
+  		}
+  }
+}
 
 
 

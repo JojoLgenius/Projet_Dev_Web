@@ -1,9 +1,12 @@
-
 <?php
 function connexion($base){
   include_once("param.inc.php");
   try {
-      $pdo = new PDO('mysql:host=localhost; dbname='.$base.'; charset=utf8','root','root');
+  		/*aller voir param.inc.php pour changer les parametres de connexion a PDO */
+  
+	   $base = 'rs05379t';  /*mettre en commentaire si connexion sur MAMP/WAMP (option que pour WEBETU) */
+  
+      $pdo = new PDO('mysql:host='.HOTE.'; dbname='.$base.'; charset=utf8',UTILISATEUR,PASSE);
       $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
       $stmt = $pdo->query("SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_NAME='membres';");

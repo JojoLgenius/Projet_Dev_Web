@@ -11,7 +11,6 @@ session_start();
 		<link rel="stylesheet" type="text/css" href="Blog.css">
 	</head>
  	<body>
- 		<center>
  			<?php
  			if (isset($_SESSION['id']) AND isset($_SESSION['nom']) AND isset($_SESSION['classe'])){
  				if ($_SESSION['classe'] == 'admin' ){

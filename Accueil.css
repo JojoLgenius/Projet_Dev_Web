@@ -25,6 +25,7 @@ h1
 {
 	font-size: 50px;
 	color: #fff;
+	text-align: center;
 }
 
 p
@@ -142,9 +143,9 @@ p
     font-family: 'f1-regular', sans-serif;
     font-size: 48px;
     font-weight: 800;
-    height: 64px;
-    width: 1024px;
-    padding: 8px 16px; 
+    height: 200px;
+    width: 1%;
+    padding: 8px 16px;
     border-radius: 4px;
     display: table-cell;
     vertical-align: middle;
@@ -163,9 +164,9 @@ p
 .bg-header
 {
 	color: #fff;
-    background: linear-gradient(-70deg, #189CA0 20%, rgba(0, 0, 0, 0) 23%), url('https://f1only.fr/wp-content/uploads/2020/06/EbsdE95WsAAwVQe-scaled.jpg');
+   background: linear-gradient(-70deg, #189CA0 20%, rgba(0, 0, 0, 0) 23%), url('https://f1only.fr/wp-content/uploads/2020/06/EbsdE95WsAAwVQe-scaled.jpg');
   	background-size: cover;
-  	background-position: 40% 55%;
+  	background-position: 50% 55%;
   	text-align: right;
 }
 
@@ -416,7 +417,39 @@ button:hover
 
 
 
+/*POUR BLOG */
 
+#optionAdmin
+{
+	text-align: center;
+}
+
+.news
+{
+	width : 80%;
+	height : 250px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	color: white;
+	text-align: center;
+	border: 1px solid white;
+	overflow: auto;
+}
+
+.news hr 
+{
+	width: 80%; 
+}
+
+
+.news em 
+{
+	margin-right: 10%;
+	font-size: 15px;
+	float: right;
+}
 
 
 

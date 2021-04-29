@@ -72,9 +72,10 @@ session_start();
 
 			</div>
 			<div id="main">
-				<center>
+				
 				<header>
  					<h1>Blog Formule1</h1>
+ 					<div id="optionAdmin">
  					<?php 
  					/* on regarde si la personne est connectée */
  					if (isset($_SESSION['id']) AND isset($_SESSION['nom']) AND isset($_SESSION['classe'])){
@@ -83,6 +84,7 @@ session_start();
  						}
  					}
  					?>
+ 					</div>
  				</header>
 					<?php
 					try {
@@ -93,9 +95,11 @@ session_start();
 						while ($donnees = $stmt->fetch()){  ?>
 
 							<div class="news">
-    							<h3><?php echo htmlspecialchars($donnees['titre']); ?>
-        						<em>le <?php echo $donnees['date_art']; ?></em>
-    							</h3>
+    							<h3><?php echo htmlspecialchars($donnees['titre']); ?></h3>
+    							<em>le <?php echo $donnees['date_art']; ?></em>
+    							<br>
+    							<hr>
+    							<br>
    
     							<p><?php echo nl2br(htmlspecialchars($donnees['contenu']));?>
     							<br></p>
@@ -112,7 +116,7 @@ session_start();
 					$stmt->closeCursor();
 					$pdo->null;
 				?>
-			</center>
+			
 			</div>
 
 
@@ -136,11 +140,12 @@ session_start();
     				<input type="text" placeholder="Entrer Username" name="nom" required><br>
 
     				<label for="passe"><b>Mot de passe</b></label><br>
-    				<input type="password" placeholder="Mot de passe" name="passe" required><br>
+    				<input type="password" placeholder="Mot de passe" name="passe" id="passe-bar1" required><br>
 
     				<label for="pass-repeat"><b>Réécrire le mot de passe</b></label><br>
-    				<input type="password" placeholder="Repéter mot de passe" name="passe-repeat" required><br>
-
+    				<input type="password" placeholder="Repéter mot de passe" name="passe-repeat" id="passe-bar2" required><br>
+					
+					<input type="checkbox" onclick="showPasse(1)">Montrer Mot de passe
 
     				<div class="clearfix">
 
@@ -167,8 +172,10 @@ session_start();
     				<input type="text" placeholder="Entrer Username" name="nom" required>
     				<br>
             <label for="passe"><b>Mot de passe</b></label><br>
-            <input type="text" placeholder="Entrer mot de passe" name="passe" required>
+            <input type="text" placeholder="Entrer mot de passe" name="passe" id="passe-bar3"required>
+            
             <br>
+            <input type="checkbox" onclick="showPasse(2)">Montrer Mot de passe
 
     				<div class="clearfix">
       					<button type="button" onclick="document.getElementById('connexionFen').style.display='none'" class="retourbtn">Retour</button>

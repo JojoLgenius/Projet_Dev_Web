@@ -40,7 +40,7 @@ session_start();
 
       <!-- les boutons dans la navigation menant a d'autres pages le Blog... -->
   		<a href="Accueil.php">Accueil</a>
-  		<a href="BlogGestion/Blog.php">Blog</a>
+  		<a href="Blog.php">Blog</a>
   		<a href="#">Actus</a>
   		<a href="#">Contact</a>
 			<a href="nextrace.php">Prochaine course</a>
@@ -167,12 +167,13 @@ session_start();
     				<input type="text" placeholder="Entrer Username" name="nom" required><br>
 
     				<label for="passe"><b>Mot de passe</b></label><br>
-    				<input type="password" placeholder="Mot de passe" name="passe" required><br>
+    				<input type="password" placeholder="Mot de passe" name="passe" id="passe-bar1" required><br>
 
     				<label for="pass-repeat"><b>Réécrire le mot de passe</b></label><br>
-    				<input type="password" placeholder="Repéter mot de passe" name="passe-repeat" required><br>
+    				<input type="password" placeholder="Repéter mot de passe" name="passe-repeat" id="passe-bar2" required><br>
 
-
+					<input type="checkbox" onclick="showPasse(1)">Montrer Mot de passe
+					
     				<div class="clearfix">
 
                 <!-- les boutons en bas du fomulaire pour soit envoyer les informations soit fermer le formulaire et passer .modal en display='none' -->
@@ -197,9 +198,11 @@ session_start();
     				<label for="nom"><b>Username</b></label><br>
     				<input type="text" placeholder="Entrer Username" name="nom" required>
     				<br>
-            <label for="passe"><b>Mot de passe</b></label><br>
-            <input type="text" placeholder="Entrer mot de passe" name="passe" required>
-            <br>
+            	<label for="passe"><b>Mot de passe</b></label><br>
+            	<input type="password" placeholder="Entrer mot de passe" name="passe" id="passe-bar3" required>
+           		<br>
+           		
+           		<input type="checkbox" onclick="showPasse(2)">Montrer Mot de passe
 
     				<div class="clearfix">
       					<button type="button" onclick="document.getElementById('connexionFen').style.display='none'" class="retourbtn">Retour</button>
