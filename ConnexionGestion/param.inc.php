@@ -7,6 +7,7 @@
 	define(PASSE,'mdp')
 	*/
 	
+	/*pour MAMP */
 	define(HOTE,'localhost');
 	define(UTILISATEUR,'root');
 	define(PASSE,'root')
