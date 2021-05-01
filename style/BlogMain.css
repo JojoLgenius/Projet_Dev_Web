@@ -1,0 +1,225 @@
+* 
+{
+	box-sizing: border-box;
+}
+
+@font-face { /* La police d'ecriture */
+  font-family: 'f1-regular';
+  src:url('../polices/Formula1-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, html  /*petites choses essentielles*/ 
+{
+	font-family: 'f1-regular', sans-serif;
+	height: 100%;
+	width: 100%;
+	background-color : #161616;
+	margin: 0px;
+	padding: 0px;
+}
+
+header
+{
+	width: 100%;
+	top: 45%;
+	left: 0;
+	text-align: center;
+	position: absolute;
+}
+
+
+
+#main
+{
+ 	transition: margin-left .5s;
+ 	padding-left: 40px;
+ 	padding-top: 0px;
+ 	margin:auto;
+ 	height:100%;
+}
+
+
+/* FENETRES DE CONNEXION/INSCRIPTION */
+
+input[type=text], input[type=password]
+{
+ 	width: 80%;
+    padding: 15px;
+ 	margin: 5px 0 22px 0;
+	display: inline-block;
+ 	border: none;
+	background: #f1f1f1;
+}
+
+input[type=text]:focus,input[type=password]:focus
+{
+	background-color: #ddd;
+	outline: none;
+}
+
+hr {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+
+button
+{
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.9;
+}
+
+button:hover
+{
+	opacity:1;
+}
+
+.retourbtn
+{
+	padding: 14px 20px;
+	background-color: #f44336;
+}
+
+.retourbtn,.inscriptionbtn
+{
+	float: center;
+	width: 40%;
+}
+
+.container
+{
+	margin : auto;
+	padding: 16px;
+}
+
+.clearfix::after
+{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.modal
+{
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: #161616;
+	padding-top: 50px;
+}
+
+.modal-content
+{
+	background-color: black;
+	margin: 5% auto 15% auto;
+	width: 60%;
+	color: white;
+}
+
+.close
+{
+	color: #f1f1f1;
+	font-size: 30px;
+	position: absolute;
+	top: 10%;
+	right: 20%;
+
+}
+
+
+
+@media screen and (max-width: 300px)
+{
+	.retourbtn, .inscriptionbtn {
+		width: 100%;
+	}
+}
+
+
+
+/*POUR BLOG */
+
+.headerParallax
+{
+	background-image: url("../images/equipes/BlogBg2.jpg");
+
+	height: 100%;
+
+  	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+}
+
+.footerParallax
+{
+	background-image: url("../images/equipes/BlogBg2.jpg");
+
+	height: 50%;
+
+  	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+}
+
+.headerParallax span
+{
+	padding : 15px;
+	margin: auto;
+	font-size: 60px;
+	color: #fff;
+	background-color: rgba(0,0,0, 0.4);
+	border: 10px solid #f1f1f1;
+}
+
+
+
+#optionAdmin
+{
+	padding : 50px;
+	margin : 20px;
+	background-color: #161616;
+	text-align: center;
+	font-size: 25px;
+}
+
+.news
+{
+	width : 80%;
+	height : 250px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	color: white;
+	text-align: center;
+	border: 5px solid #f1f1f1;
+	overflow: auto;
+}
+
+.news hr 
+{
+	width: 80%;
+  	border: 2px solid #f1f1f1;
+}
+
+
+.date
+{
+	margin-right: 10%;
+	font-size: 15px;
+	float: right;
+}
