@@ -121,7 +121,7 @@ session_start();
 					<span>Nous contacter :</span>
 				</div>
 
-				<form class="modal-content" action="Contact/envoyerMessage.js" method="POST" style="border:1px solid #ccc">
+				<form class="modal-content" action="ContactGestion/envoyerMail.php" method="POST" style="border:1px solid #ccc">
           <!-- debut formulaire  sui renvoie via POST les informations du fomulaire a "ajouter.php" --> 
   				<div class="container">
     				<p>Remplissez les informations pour nous contacter</p>
@@ -135,20 +135,19 @@ session_start();
     				<br>
 
     				<label for="passe"><b>Email</b></label><br>
-    				<input type="password" placeholder="Email" name="email" required><br>
+    				<input type="text" placeholder="Email" name="email" required><br>
 
-    				<label for="message"><b>Contenu de l'article</b></label><br>
-            <textarea rows="10" cols="40" placeholder="Votre Message" name="message"></textarea>
+    				<label for="message"><b>Message</b></label><br>
+            		<textarea rows="10" cols="40" placeholder="Votre Message" name="message" required></textarea>
 
     				<div class="clearfix">
                 <!-- les boutons en bas du fomulaire pour soit envoyer les informations soit fermer le formulaire et passer .modal en display='none' -->
       					<button type="button" onclick="document.getElementById('inscriptionFen').style.display='none'" class="retourbtn">Retour</button>
-      					<button type="submit" class="inscriptionbtn">S'inscrire</button>
+      					<button type="submit" class="inscriptionbtn">Envoyer</button>
     				</div>
   				</div>
 			</form>
 			</div>
-
 		</div>
 
 
