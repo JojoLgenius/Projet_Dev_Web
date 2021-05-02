@@ -24,13 +24,15 @@ session_start();
     				<input type="text" placeholder="Titre de l'article" name="titre" required>
     				<br>
 
-            		<label for="contenu"><b>Contenu de l'article</b></label><br>
-            		<textarea rows="10" cols="40" placeholder="Contenu de l'article" name="contenu"></textarea>
-            		<br>
+            <label for="contenu"><b>Message</b></label><br>
+            <textarea rows="10" cols="40" placeholder="Contenu de l'article" name="contenu"></textarea>
+            <br>
 
-    				<button type="submit">Envoyer article</button>
-      				<button type="button" onclick="location.href='ChangerArt.php'" class="retourbtn">Retour</button>
-  				</div>
+            <div class="clearfix">
+    				  <button type="submit">Envoyer message</button>
+      			  <button type="button" onclick="location.href='ChangerArt.php'" class="retourbtn">Retour</button>
+  				  </div>
+          </div>
 			</form>
 			</div>
  		</center>

@@ -40,8 +40,8 @@ session_start();
 				<!-- les boutons dans la navigation menant a d'autres pages le Blog... -->
 				<a href="Accueil.php">Accueil</a>
 				<a href="Blog.php">Blog</a>
-				<a href="#">Actus</a>
-				<a href="#">Contact</a>
+				<a href="Actus.php">Actus</a>
+				<a href="Contact.php">Contact</a>
 				<a href="nextrace.php">Prochaine course</a>
 
 				<br>
@@ -72,8 +72,9 @@ session_start();
 					<a onclick="document.getElementById('inscriptionFen').style.display='block'" class='serveur' >Inscription</a> 
 					END;
 				}?>
-
 			</div>
+
+
 			<div id="main">
 
 				<div class="headerParallax">
@@ -81,6 +82,8 @@ session_start();
  						<span>BLOG</span>
  					</header>
  				</div>
+ 				
+ 				<article>
 
 					<?php
 					try {
@@ -112,6 +115,7 @@ session_start();
 					$stmt->closeCursor();
 					$pdo->null;
 				?>
+				</article>
 
 			<div class="footerParallax"></div>
 
@@ -135,7 +139,7 @@ session_start();
 
 
 
-			<!-- DEBUT FORMULAIRES POUR CONNEXION ADMIN ET INSCRIPTION -->
+		<!-- DEBUT FORMULAIRES POUR CONNEXION ADMIN ET INSCRIPTION -->
 
 		<div id="inscriptionFen" class="modal">
           <!-- les options sur le onclick permettent d'afficher les formulaires dans une "fenetre" -->
@@ -183,11 +187,11 @@ session_start();
     				<label for="nom"><b>Username</b></label><br>
     				<input type="text" placeholder="Entrer Username" name="nom" required>
     				<br>
-            <label for="passe"><b>Mot de passe</b></label><br>
-            <input type="text" placeholder="Entrer mot de passe" name="passe" id="passe-bar3"required>
+            		  <label for="passe"><b>Mot de passe</b></label><br>
+            		<input type="text" placeholder="Entrer mot de passe" name="passe" id="passe-bar3"required>
             
-            <br>
-            <input type="checkbox" onclick="showPasse(2)">Montrer Mot de passe
+            		<br>
+            		<input type="checkbox" onclick="showPasse(2)">Montrer Mot de passe
 
     				<div class="clearfix">
       					<button type="button" onclick="document.getElementById('connexionFen').style.display='none'" class="retourbtn">Retour</button>

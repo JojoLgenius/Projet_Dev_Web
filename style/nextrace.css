@@ -28,7 +28,7 @@ html {
 
 body
 {
-	position:relative;
+	position: relative;
 	height: 100%;
 	width: 100%;
 	background-color : #161616;
@@ -94,11 +94,11 @@ header{
 Position en bas à droite decalé legerement vers la gauche
 */
 footer{
-position:relative;
-float: right;
-margin-top:15%;
-margin-right: 2%;
-margin-bottom:2%;
+	position:relative;
+	float: right;
+	margin-top:2%;
+	margin-right: 2%;
+	margin-bottom:2%;
 }
 /*TAille de la police du pied de page*/
 footer>p{

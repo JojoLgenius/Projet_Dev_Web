@@ -1,11 +1,12 @@
 <?php
 	/* Pour connection MAMP CHANGER :: UTILISATEUR = 'root' PASSE = 'root' */
 	/* Sinon pour connection WEBETU :: UTILISATEUR = 'usernameFac' PASSE = 'mdp base de donnée SQL perso' se trouvant sur https://webetu.univ-st-etienne.fr/  : onglet base de données : Montrer mdp 
-	exemple : pour WEBETU*/
+	exemple : pour WEBETU */
 
+	/*
 	define(HOTE,'localhost');
 	define(UTILISATEUR,'rs05378t');  
-	define(PASSE,'IFD4EJAQ');
+	define(PASSE,'IFD4EJAQ');*/
 	
 	/*  /\
 		||
@@ -13,9 +14,9 @@
 		||
 		\/
 	*/
-	/*pour MAMP
+	/*pour MAMP*/
 
 	define(HOTE,'localhost');
 	define(UTILISATEUR,'root');
-	define(PASSE,'root')*/
+	define(PASSE,'root')
 ?>

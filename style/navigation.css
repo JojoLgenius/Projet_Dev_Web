@@ -21,7 +21,7 @@
   transition: 0.3s;
 }
 
-.sidenav   /* La bare de navigation*/
+.sidenav   /* La barre de navigation*/
 {
 	background-color: black;
   height: 100%;
@@ -80,5 +80,15 @@
 {
  	.sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+
+#main
+{
+  transition: margin-left .5s;
+  padding-left: 40px;
+  padding-top: 0px;
+  margin:auto;
+  height:100%;
 }
 
