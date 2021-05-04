@@ -200,8 +200,8 @@ button:hover
 
 #optionAdmin
 {
-	padding : 50px;
-	margin : 20px;
+	padding : 20px;
+	margin : 10px;
 	background-color: #161616;
 	text-align: center;
 	font-size: 25px;
@@ -210,7 +210,7 @@ button:hover
 .news
 {
 	width : 80%;
-	height : 250px;
+	height : 420px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 30px;
@@ -233,4 +233,10 @@ button:hover
 	margin-right: 10%;
 	font-size: 15px;
 	float: right;
+}
+
+
+.commentaires {
+	float : left;
+	margin-left: 20px;
 }

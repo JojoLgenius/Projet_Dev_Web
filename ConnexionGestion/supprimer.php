@@ -35,6 +35,6 @@ session_start();
           echo "<h1>Mauvais paramètres</h1> <br> <a href='../Accueil.php'>Revenir accueil</a>";
       }?>
     </center>
-    <meta http-equiv="refresh" content="1; url=../Accueil.php" />
+    <meta http-equiv="refresh" content="2; url=../Accueil.php" />
   </body>
 </html>

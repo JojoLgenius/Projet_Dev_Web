@@ -11,7 +11,7 @@
     if (isset($_POST['nom']) AND isset($_POST['prenom']) AND isset($_POST['email']) AND isset($_POST['message']))
     {
 
-    	$entete = 'From: ' . $_POST['email'] . "\r\n";
+    	$entete = 'From: ' . $_POST['email'] . '\r\n';
 
     	$message = '<h1>Message envoyé depuis la page Contact de monsite.fr</h1>
     	<p><b>Prenom : </b>' . $_POST['prenom'] . '<br>
@@ -24,6 +24,9 @@
 	
     	if ($retour) {
         	echo '<p>Votre message a bien été envoyé.</p>';
+    	}
+    	else {
+    		echo "<p>le message n/'a pas été envoyé</p>";
     	}
 	}
     ?>

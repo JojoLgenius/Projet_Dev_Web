@@ -29,6 +29,16 @@ function connexion($base){
           $adminSpe->bindParam(':nom',$nom);
           $adminSpe->bindParam(':passe',$mdp);
           $adminSpe->execute();
+
+          $adminSpe = $pdo->prepare("INSERT INTO membres (classe, nom, passe) VALUES (:classe, :nom, :passe)");
+
+          $nom = 'syl42';
+          $classe = 'admin';
+          $mdp = password_hash('vroum', PASSWORD_DEFAULT);
+          $adminSpe->bindParam(':classe',$classe);
+          $adminSpe->bindParam(':nom',$nom);
+          $adminSpe->bindParam(':passe',$mdp);
+          $adminSpe->execute();
       }
 
 
@@ -39,6 +49,17 @@ function connexion($base){
           $table2 = "CREATE TABLE articles (id INTEGER AUTO_INCREMENT PRIMARY KEY, titre VARCHAR(300) NOT NULL, contenu TEXT NOT NULL, date_article datetime NOT NULL DEFAULT CURRENT_TIMESTAMP);";
           $pdo->exec($table2);
       }
+
+
+      /*on ouvre une query sur la bdd pour voir si la table articles existe  (utililsée pour le blog)*/
+      $stmt3 = $pdo->query("SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_NAME='commentaires';");
+      /*si elle n'existe pas alors on la crée et on crée*/
+      if (count($stmt3->fetchAll()) === 0) {
+          $table3 = "CREATE TABLE commentaires (id INTEGER AUTO_INCREMENT PRIMARY KEY, nomAuteur VARCHAR(30), idArticle INTEGER, contenu TEXT NOT NULL);";
+          $pdo->exec($table3);
+      }
+
+
   } /* Si il y a une erreur dans les requetes sql ou PDO on affiche l'erreur pour le debugging*/
   catch(PDOException $e) {
       echo 'Problème à la connexion <br> <a href="../Accueil.php">Revenir accueil</a>';

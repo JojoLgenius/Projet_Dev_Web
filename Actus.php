@@ -161,8 +161,8 @@ session_start();
 	    <span onclick="document.getElementById('adminFen').style.display='none'" class="close" title="Close Modal">&times;</span>
 	    <form class="modal-content" action="ConnexionGestion/resultats.php" method="POST" style="border:1px solid #ccc">
 	        <div class="container">
-	            <h1>Connexion</h1>
-	            <p>Remplissez pour la connexion</p>
+	            <h1>Recherche</h1>
+	            <p>Remplissez pour gerer les utilisateurs</p>
 	            <hr>
 
 	            <label for="nom"><b>Username</b></label><br>
@@ -175,7 +175,7 @@ session_start();
 
 	            <div class="clearfix">
 	                <button type="button" onclick="document.getElementById('adminFen').style.display='none'" class="retourbtn">Retour</button>
-	                <button type="submit" class="inscriptionbtn">Se connecter</button>
+	                <button type="submit" class="inscriptionbtn">Rechercher</button>
 	            </div>
 	        </div>
 	    </form>

@@ -89,21 +89,55 @@ session_start();
 					try {
 						include('ConnexionGestion/connex.inc.php');
             			$pdo = connexion('bdd_membre');
-						$stmt = $pdo->query('SELECT id, titre, contenu, DATE_FORMAT(date_article, \'%d/%m/%Y à %Hh\') AS date_art FROM articles ORDER BY date_art DESC LIMIT 0, 5;');
+						$stmt = $pdo->query('SELECT id, titre, contenu, DATE_FORMAT(date_article, \'%d/%m/%Y à %Hh\') AS date_art FROM articles ORDER BY date_art DESC LIMIT 0, 10;');
 
-						while ($donnees = $stmt->fetch()){  ?>
-
+						while ($articles = $stmt->fetch()){  ?>
 							<div class="news">
-    							<h3><?php echo htmlspecialchars($donnees['titre']); ?></h3>
-    							<em class='date'>le <?php echo $donnees['date_art']; ?></em>
+    							<h3><?php echo htmlspecialchars($articles['titre']); ?></h3>
+    							<em class='date'>le <?php echo $articles['date_art']; ?></em>
     							<br>
     							<hr>
     							<br>
    
-    							<p><?php echo nl2br(htmlspecialchars($donnees['contenu']));?>
-    							<br></p>
+    							<p><?php echo nl2br(htmlspecialchars($articles['contenu']));?></p>
     							<br>
-							</div>
+    							<hr>
+
+    							<div class="commentaires">
+    							<ul>
+    							<?php
+    							$stmt2 = $pdo->query('SELECT id, nomAuteur, idArticle, contenu FROM commentaires ORDER BY id DESC');
+    							$commentaires = $stmt2->fetchAll();
+    							foreach ($commentaires as $commentaire) {
+    								if ($commentaire['idArticle'] == $articles['id']){
+    								?>
+    								 	<li>
+										<p><?php echo htmlspecialchars($commentaire['nomAuteur']); ?></p>
+										<p><?php echo htmlspecialchars($commentaire['contenu']); ?></p>
+										<?php
+										if ($_SESSION['classe'] == 'admin' || $commentaire['nomAuteur'] == $_SESSION['nom']){
+										 	echo '<a href="BlogGestion/SuppCom.php?idCom='.$commentaire['id'].'">supprimer</a><br></li><br>';
+										}
+										echo '<br>';
+									}
+								}
+								echo '</ul>';
+								echo '</div>';
+								if (isset($_SESSION['id']) AND isset($_SESSION['nom']) AND isset($_SESSION['classe'])){
+									?>
+									<form class="formCom" action="BlogGestion/AjouterCom.php" method="POST">
+										<br>
+										<input name="idArticle" type="hidden" value=<?php echo $articles['id'] ?> >
+										<input name="nomAuteur" type="hidden" value=<?php echo $_SESSION['nom'] ?> >
+										<label for="contenu"><b>Commenter : </b></label>
+            							<textarea rows="1" placeholder="Commentaire" name="contenu"></textarea>
+            							<input type="submit" value="Envoi">
+									</form>
+									<?php
+								}
+								?>
+									<br>
+								</div>
 
 							<?php
 						}
@@ -208,8 +242,8 @@ session_start();
 	        <span onclick="document.getElementById('adminFen').style.display='none'" class="close" title="Close Modal">&times;</span>
 	      	<form class="modal-content" action="ConnexionGestion/resultats.php" method="POST" style="border:1px solid #ccc">
 	          <div class="container">
-	            <h1>Connexion</h1>
-	            <p>Remplissez pour la connexion</p>
+	            <h1>Recherche</h1>
+	            <p>Remplissez pour gerer les utilisateurs</p>
 	            <hr>
 
 	            <label for="nom"><b>Username</b></label><br>
@@ -222,7 +256,7 @@ session_start();
 
 	            <div class="clearfix">
 	                <button type="button" onclick="document.getElementById('adminFen').style.display='none'" class="retourbtn">Retour</button>
-	                <button type="submit" class="inscriptionbtn">Se connecter</button>
+	                <button type="submit" class="inscriptionbtn">Rechercher</button>
 	            </div>
 	          </div>
 	      	</form>
