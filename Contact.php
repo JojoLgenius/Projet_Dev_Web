@@ -142,7 +142,6 @@ session_start();
 
     				<div class="clearfix">
                 <!-- les boutons en bas du fomulaire pour soit envoyer les informations soit fermer le formulaire et passer .modal en display='none' -->
-      					<button type="button" onclick="document.getElementById('inscriptionFen').style.display='none'" class="retourbtn">Retour</button>
       					<button type="submit" class="inscriptionbtn">Envoyer</button>
     				</div>
   				</div>

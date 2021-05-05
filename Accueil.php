@@ -88,24 +88,26 @@ session_start();
     <!-- le div main ici est important car il coupe la page entre navigation et le reste de la page -->
     <!-- cela fait que quand on appuie sur l'image pour ouvrir la navigation, tout le reste de la page bouge a l'unisson-->
 		<div id="main">
-			<header> <!-- Grande image du haut -->
+
+      <video autoplay muted loop id="myVideo">
+        <source src="video/2021-f1-opening-titles.mp4" type="video/mp4">
+      </video>
+			<article><!-- Grande image du haut -->
 				<div class="title">
 					<div class="card-holder">
 						<div class="card bg-header"></div>
 					</div>
 				</div>
-			</header>
 
 
       <!-- Texte au milieu -->
-			<article>
 				<div class="articlePress">
 					<h1 style='border: 8px solid #fff'> Bienvenue ! </h1>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
 					</p>
 				</div>
-      		</article>
+      
 
 
 
@@ -148,6 +150,7 @@ session_start();
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
         </div>
+        </article>
 
 		</div>
 

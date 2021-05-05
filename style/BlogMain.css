@@ -210,16 +210,21 @@ button:hover
 .news
 {
 	width : 80%;
-	height : 420px;
+	max-height : 500px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 30px;
 	margin-top: 30px;
 	color: white;
-	text-align: center;
 	border: 5px solid #f1f1f1;
 	overflow: auto;
 }
+
+.news h3,h4
+{
+	text-align: center;
+}
+
 
 .news hr 
 {
@@ -235,8 +240,19 @@ button:hover
 	float: right;
 }
 
-
-.commentaires {
-	float : left;
+.commentaires
+{
+	text-align: none;
 	margin-left: 20px;
+}
+
+.formCom
+{
+	height:40px;
+}
+
+.formCom textarea
+{
+	height: 25px;
+	width: 40%;
 }

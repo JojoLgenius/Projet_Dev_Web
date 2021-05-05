@@ -51,7 +51,7 @@ function connexion($base){
       }
 
 
-      /*on ouvre une query sur la bdd pour voir si la table articles existe  (utililsée pour le blog)*/
+      /*on ouvre une query sur la bdd pour voir si la table commentaires existe  (utililsée pour le blog)*/
       $stmt3 = $pdo->query("SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_NAME='commentaires';");
       /*si elle n'existe pas alors on la crée et on crée*/
       if (count($stmt3->fetchAll()) === 0) {
