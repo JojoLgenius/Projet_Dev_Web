@@ -49,7 +49,7 @@ session_start();
 			<!-- les boutons dans la navigation menant a d'autres pages le Blog... -->
 			<a href="Accueil.php">Accueil</a>
 			<a href="Blog.php">Blog</a>
-			<a href="Actus.php">Actus</a>
+			<a href="Classements.php">Classement</a>
 			<a href="Contact.php">Contact</a>
 			<a href="nextrace.php">Prochaine course</a>
 
@@ -108,7 +108,7 @@ session_start();
 				try {
 					include('ConnexionGestion/connex.inc.php');
            			$pdo = connexion('bdd_membre');
-					$stmt = $pdo->query('SELECT id, titre, contenu, DATE_FORMAT(date_article, \'%d/%m/%Y à %Hh\') AS date_art FROM articles ORDER BY date_art DESC LIMIT 0, 10;');
+					$stmt = $pdo->query('SELECT id, titre, contenu, DATE_FORMAT(date_article, \'%d/%m/%Y à %Hh\') AS date_art FROM articles ORDER BY date_article DESC LIMIT 0, 10;');
 
 					while ($articles = $stmt->fetch()){  ?>
 						<div class="news">
@@ -165,6 +165,7 @@ session_start();
           			}
 
 					$stmt->closeCursor();
+					$stmt2->closeCursor();
 					$pdo->null;
 				?>
 				</article>

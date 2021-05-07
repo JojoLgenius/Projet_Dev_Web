@@ -1,7 +1,7 @@
 //fonctions pour le menu deroulant sur le coté de la page
 function openNav() {
-  document.getElementById("mySidenav").style.width = "200px";
-  document.getElementById("main").style.marginLeft = "160px";
+  document.getElementById("mySidenav").style.width = "220px";
+  document.getElementById("main").style.marginLeft = "180px";
 }
 
 function closeNav() {

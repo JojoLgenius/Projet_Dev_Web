@@ -43,7 +43,7 @@ session_start();
 			<!-- les boutons dans la navigation menant a d'autres pages le Blog... -->
 			<a href="Accueil.php">Accueil</a>
 			<a href="Blog.php">Blog</a>
-			<a href="Actus.php">Actus</a>
+			<a href="Classements.php">Classement</a>
 			<a href="Contact.php">Contact</a>
 			<a href="nextrace.php">Prochaine course</a>
 

@@ -60,6 +60,31 @@ function connexion($base){
       }
 
 
+      $stmt4 = $pdo->query("SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_NAME='pilotes';");
+      if (count($stmt4->fetchAll()) === 0) {
+          $table4 = "CREATE TABLE pilotes (id INTEGER AUTO_INCREMENT PRIMARY KEY, pilote VARCHAR(30), pays VARCHAR(30), constructeur VARCHAR(30), pointsTotal INTEGER, pointsSaison INTEGER, podiumsSaison INTEGER, victoiresSaison INTEGER, GP INTEGER);";
+          $pdo->exec($table4);
+
+          $pilotes = "INSERT INTO pilotes (pilote, pays, constructeur, pointsTotal, pointsSaison, podiumsSaison, victoiresSaison, GP) VALUES 
+          ('Lewis Hamilton', 'Royaume-Uni', 'Mercedes', 3847, 69, 3, 2, 269),
+          ('Sebastian Vettel', 'Allemagne', 'Aston Martin', 3018, 0, 0, 0, 260),
+          ('Fernando Alonso', 'Espagne', 'Alpine', 1904, 5, 0, 0, 315),
+          ('Kimi Räikkönen', 'Finlande', 'Alfa Romeo', 1863, 0, 0, 0, 333),
+          ('Valtteri Bottas', 'Finlande', 'Mercedes', 1544, 32, 2, 0, 159),
+          ('Max Verstappen', 'Pays-Bas', 'Red Bull', 1223, 61, 3, 1, 122),
+          ('Daniel Ricciardo', 'Australie', 'McLaren', 1175, 16, 0, 0, 191),
+          ('Sergio Pérez', 'Mexique', 'Red Bull', 728, 22, 0, 0, 194),
+          ('Charles Leclerc', 'Monaco','Ferrari', 429, 28, 0, 0, 62),
+          ('Carlos Sainz Jr.', 'Espagne', 'Ferrari', 386, 14, 0, 0, 121),
+          ('Pierre Gasly', 'France', 'AlphaTauri', 206, 7, 0, 0, 67),
+          ('Esteban Ocon', 'France', 'Alpine', 206, 8, 0, 0, 70),
+          ('Lando Norris', 'Royaume-Uni', 'McLaren', 183, 37,1 ,0, 41),
+          ('Lance Stroll', 'Canada', 'AstonMartin', 147, 5, 0, 0, 81);";
+          $pdo->exec($pilotes);
+      }
+      
+
+
   } /* Si il y a une erreur dans les requetes sql ou PDO on affiche l'erreur pour le debugging*/
   catch(PDOException $e) {
       echo 'Problème à la connexion <br> <a href="../Accueil.php">Revenir accueil</a>';

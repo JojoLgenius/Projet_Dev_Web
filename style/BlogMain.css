@@ -149,8 +149,6 @@ button:hover
 
 }
 
-
-
 @media screen and (max-width: 300px)
 {
 	.retourbtn, .inscriptionbtn {
@@ -197,7 +195,6 @@ button:hover
 }
 
 
-
 #optionAdmin
 {
 	padding : 20px;
@@ -209,11 +206,11 @@ button:hover
 
 .news
 {
-	width : 80%;
+	width : 70%;
 	max-height : 500px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 30px;
+	margin-bottom: 100px;
 	margin-top: 30px;
 	color: white;
 	border: 5px solid #f1f1f1;
@@ -223,19 +220,28 @@ button:hover
 .news h3,h4
 {
 	text-align: center;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.news h3
+{
+	margin-top: 20px;
+	text-transform: uppercase;
+	text-decoration: underline;
 }
 
 
 .news hr 
 {
-	width: 80%;
+	width: 85%;
   	border: 2px solid #f1f1f1;
 }
 
 
 .date
 {
-	margin-right: 10%;
+	margin-right: 7.5%;
 	font-size: 15px;
 	float: right;
 }
@@ -243,12 +249,14 @@ button:hover
 .commentaires
 {
 	text-align: none;
-	margin-left: 20px;
+	margin-left: 5%;
 }
 
 .formCom
 {
 	height:40px;
+	margin-left: 5%;
+	margin-bottom: 10px;
 }
 
 .formCom textarea

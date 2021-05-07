@@ -1,0 +1,210 @@
+* 
+{
+	box-sizing: border-box;
+}
+
+@font-face { /* La police d'ecriture */
+  font-family: 'f1-regular';
+  src:url('../polices/Formula1-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, html  /*petites choses essentielles*/ 
+{
+	font-family: 'f1-regular', sans-serif;
+	height: 170%;
+	width: 100%;
+	background-image: url("../images/equipes/BlogBg1.jpg");
+  	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+	margin: 0px;
+	padding: 0px;
+	color: white;
+}
+
+header
+{
+	position: absolute;
+	width: 100%;
+	top: 45%;
+	left: 0;
+	text-align: center;
+}
+
+
+
+
+
+
+
+/* FENETRES DE CONNEXION/INSCRIPTION */
+
+input[type=text], input[type=password]
+{
+ 	width: 80%;
+    padding: 15px;
+ 	margin: 5px 0 22px 0;
+	display: inline-block;
+ 	border: none;
+	background: #f1f1f1;
+}
+
+input[type=text]:focus,input[type=password]:focus
+{
+	background-color: #ddd;
+	outline: none;
+}
+
+hr {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+
+button
+{
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.9;
+}
+
+button:hover
+{
+	opacity:1;
+}
+
+.retourbtn
+{
+	padding: 14px 20px;
+	background-color: #f44336;
+}
+
+.retourbtn,.inscriptionbtn
+{
+	float: center;
+	width: 40%;
+}
+
+.container
+{
+	margin : auto;
+	padding: 16px;
+}
+
+.clearfix::after
+{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.modal
+{
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: #161616;
+	padding-top: 50px;
+}
+
+.modal-content
+{
+	background-color: black;
+	margin: 5% auto 15% auto;
+	width: 60%;
+	color: white;
+}
+
+.close
+{
+	color: #f1f1f1;
+	font-size: 30px;
+	position: absolute;
+	top: 10%;
+	right: 20%;
+
+}
+
+
+
+@media screen and (max-width: 300px)
+{
+	.retourbtn, .inscriptionbtn {
+		width: 100%;
+	}
+}
+
+
+
+/*POUR ACTUS */
+
+
+span
+{
+	padding : 15px;
+	margin: auto;
+	font-size: 60px;
+	color: #fff;
+	background-color: rgba(0,0,0, 0.4);
+	border: 10px solid #f1f1f1;
+}
+
+
+
+.tabPilote
+{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: 18%;
+	background-color: rgba(0,0,0,0.7);
+	border-collapse: collapse;
+  	border-spacing: 0;
+  	width: 60%;
+  	border: 1px solid #ddd;
+  	text-align: left;
+}
+
+.tab1
+{
+	position: absolute;
+	top : 100%;
+}
+
+.tab2
+{
+	position: absolute;
+	top : 180%;
+}
+
+.tabPilote caption
+{
+	font-size: 35px;
+	text-decoration: underline;
+	margin-bottom: 10px;
+}
+
+
+.tabPilote th, .tabPilote td 
+{
+  padding-bottom: 15px;
+  padding-left: 30px;
+}
+
+
+th
+{
+	font-size: 20px;
+	text-decoration: underline;
+}
