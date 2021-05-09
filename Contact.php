@@ -13,11 +13,29 @@ session_start();
 		<link rel="stylesheet" type="text/css" href="style/Contact.css">
 		<link rel="stylesheet" type="text/css" href="style/navigation.css">
 		<script type="text/javascript" src="scripts/navigation.js"></script>
+		
+		<!-- script pour google maps -->
 		<script type="text/javascript" src="scripts/map.js"></script>
-		 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+		<!--Importations de scripts donnés par google pour implanter google maps
+		    Marche seulement avec botre clé API, et donc sur les url que nous avons décidés -->
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHW2nIfjKcUAbA1DRIjLDXw0FTZV34q4Q&callback=initMap&libraries=&v=weekly"
       async></script>
 	</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
  	<body>
  		<!-- image qui quand on appuie dessus ouvre le menu de navigation -->
 		<div id="imageNavContainer">
@@ -46,7 +64,6 @@ session_start();
 			<a href="Classements.php">Classement</a>
 			<a href="Contact.php">Contact</a>
 			<a href="nextrace.php">Prochaine course</a>
-
 			<br>
 			<br>
 
@@ -79,8 +96,23 @@ session_start();
 		</div>
 
 
-		<div id="main">
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div id="main">
+			<!-- les cartes des membres du projet -->
 			<div class="headerCards">
 				<div class="titre-Part">
 					<span>Membres du Projet</span>
@@ -89,7 +121,7 @@ session_start();
 					<div class="card">
   						<img src="images/imgPortrait1.jpg" alt="Sylvain" style="width:50%">
   						<h1>Sylvain Rome</h1>
-  						<p class="title">Etudiant</p>
+  						<p class="title">Etudiant L2</p>
   						<p>Jean Monnet  Saint-Etienne</p>
 					</div>
 				</div>
@@ -100,13 +132,13 @@ session_start();
 					<div class="card">
   						<img src="images/imgPortrait1.jpg" alt="Jocelyn" style="width:50%">
   						<h1>Jocelyn Hauf</h1>
-  						<p class="title">Etudiant, Jean Monnet</p>
+  						<p class="title">Etudiant L2</p>
   						<p>Jean Monnet  Saint-Etienne</p>
 					</div>
 				</div>
 			</div>
 
-
+			<!-- l'incrustation de google maps pour l'endroit ou nous trouver -->
 			<div class="Maps">
 				<div class="titre-Part">
 					<span>Où?</span>
@@ -115,18 +147,17 @@ session_start();
 			</div>
 
 
-
+			<!-- Le formulaire de contact qui est envoyé a envoyerMail.php -->
 			<div class="footerForm">
 				<div class="titre-Part">
 					<span>Nous contacter :</span>
 				</div>
-
 				<form class="modal-content" action="ContactGestion/envoyerMail.php" method="POST" style="border:1px solid #ccc">
-          <!-- debut formulaire  sui renvoie via POST les informations du fomulaire a "ajouter.php" --> 
   				<div class="container">
     				<p>Remplissez les informations pour nous contacter</p>
     				<hr>
-            <!-- on demande un speudo et deux fois le mdp -->
+    				<!-- On demande le Nom le Prenom l'email et le message 
+    					ATTENTION PROBLEME SUR envoyerMail.php COMMANDE MAIL NE MARCHE PAS --> 
     				<label for="nom"><b>Nom</b></label><br>
     				<input type="text" placeholder="Entrer Nom" name="nom" required><br>
 
@@ -148,6 +179,24 @@ session_start();
 			</form>
 			</div>
 		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

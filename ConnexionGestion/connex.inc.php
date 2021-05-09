@@ -41,6 +41,8 @@ function connexion($base){
           $adminSpe->execute();
       }
 
+      
+
 
       /*on ouvre une query sur la bdd pour voir si la table articles existe  (utililsée pour le blog)*/
       $stmt2 = $pdo->query("SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_NAME='articles';");
@@ -49,6 +51,8 @@ function connexion($base){
           $table2 = "CREATE TABLE articles (id INTEGER AUTO_INCREMENT PRIMARY KEY, titre VARCHAR(300) NOT NULL, contenu TEXT NOT NULL, date_article datetime NOT NULL DEFAULT CURRENT_TIMESTAMP);";
           $pdo->exec($table2);
       }
+
+
 
 
       /*on ouvre une query sur la bdd pour voir si la table commentaires existe  (utililsée pour le blog)*/
@@ -60,6 +64,8 @@ function connexion($base){
       }
 
 
+
+      /*on ouvre une query sur la bdd pour voir si la table pilotes existe  (utililsée pour le Classement)*/
       $stmt4 = $pdo->query("SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_NAME='pilotes';");
       if (count($stmt4->fetchAll()) === 0) {
           $table4 = "CREATE TABLE pilotes (id INTEGER AUTO_INCREMENT PRIMARY KEY, pilote VARCHAR(30), pays VARCHAR(30), constructeur VARCHAR(30), pointsTotal INTEGER, pointsSaison INTEGER, podiumsSaison INTEGER, victoiresSaison INTEGER, GP INTEGER);";

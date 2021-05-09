@@ -12,10 +12,10 @@ function closeNav() {
 
 
 
+
 var modal = document.getElementById('inscriptionFen');
 var modal2 = document.getElementById('connexionFen');
 var modal3 = document.getElementById('adminFen');
-
 
 window.onclick = function(event) {
   if (event.target == modal || event.target == modal2 || event.target == modal3) {
@@ -24,6 +24,8 @@ window.onclick = function(event) {
     modal3.style.display = "none";
   }
 }
+
+
 
 
 function showPasse(x) {
