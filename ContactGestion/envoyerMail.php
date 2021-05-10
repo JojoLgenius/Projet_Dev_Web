@@ -11,16 +11,16 @@
     if (isset($_POST['nom']) AND isset($_POST['prenom']) AND isset($_POST['email']) AND isset($_POST['message']))
     {
 
-    	$entete = 'From: ' . $_POST['email'] . '\r\n';
+    	/*$entete = 'From: ' . $_POST['email'] . '\r\n';*/
 
-    	$message = '<h1>Message envoyé depuis la page Contact de monsite.fr</h1>
+    	/*$message = '<h1>Message envoyé depuis la page Contact de monsite</h1>
     	<p><b>Prenom : </b>' . $_POST['prenom'] . '<br>
         <p><b>Nom : </b>' . $_POST['nom'] . '<br>
         <b>Email : </b>' . $_POST['email'] . '<br>
-        <b>Message : </b>' . $_POST['message'] . '</p>';
+        <b>Message : </b>' . $_POST['message'] . '</p>';*/
 
 
-    	$retour = mail('syl9456@live.com', 'Envoi depuis la page Contact', $message, $entete);
+    	$retour = mail('syl9456@live.com', 'Envoi depuis la page Contact', $_POST["message"]/*, $entete*/);
 	
     	if ($retour) {
         	echo '<p>Votre message a bien été envoyé.</p>';

@@ -18,6 +18,8 @@ session_start();
 		<script type="text/javascript" src="scripts/slidesImages.js"></script>
     <script type="text/javascript" src="scripts/navigation.js"></script>
     <script type="text/javascript" src="scripts/sonVideo.js"></script>
+    <script type="text/javascript" src="scripts/formInputMax.js"></script>
+    <script type="text/javascript" src="scripts/formulaireConnexVerif.js"></script>
 	</head>
 
 	<body>
@@ -200,7 +202,7 @@ session_start();
           <!-- les options sur le onclick permettent d'afficher les formulaires dans une "fenetre" -->
           <!-- cette fenetre est en fait en cascade devant la page de base   grace a z-index dans le css sous .modal -->
         	<span onclick="document.getElementById('inscriptionFen').style.display='none'" class="close" title="Close Modal">&times;</span>
-			<form class="modal-content" action="ConnexionGestion/ajouter.php" method="POST" style="border:1px solid #ccc">
+			<form class="modal-content" onsubmit="return verifierDonneesConnex()" action="ConnexionGestion/ajouter.php" method="POST" style="border:1px solid #ccc">
           <!-- debut formulaire  sui renvoie via POST les informations du fomulaire a "ajouter.php" --> 
   				<div class="container">
     				<h1>Inscription</h1>
@@ -208,13 +210,13 @@ session_start();
     				<hr>
             <!-- on demande un speudo et deux fois le mdp -->
     				<label for="nom"><b>Username</b></label><br>
-    				<input type="text" placeholder="Entrer Username" name="nom" required><br>
+    				<input type="text" onKeyUp="longueurMax(this, 30);" placeholder="Entrer Username" name="nom" required><br>
 
     				<label for="passe"><b>Mot de passe</b></label><br>
-    				<input type="password" placeholder="Mot de passe" name="passe" id="passe-bar1" required><br>
+    				<input type="password" onKeyUp="longueurMax(this, 30);" placeholder="Mot de passe" name="passe" id="passe-bar1" required><br>
 
     				<label for="pass-repeat"><b>Réécrire le mot de passe</b></label><br>
-    				<input type="password" placeholder="Repéter mot de passe" name="passe-repeat" id="passe-bar2" required><br>
+    				<input type="password" onKeyUp="longueurMax(this, 30);" placeholder="Repéter mot de passe" name="passe-repeat" id="passe-bar2" required><br>
 
             <input type="checkbox" onclick="showPasse(1)">Montrer Mot de passe
 					
@@ -232,17 +234,17 @@ session_start();
     <!-- Globalement la meme chose que le formulaire precendent mai renvoie des informations différentes a une page php differente : ici connecter.php -->
 		<div id="connexionFen" class="modal">
         	<span onclick="document.getElementById('connexionFen').style.display='none'" class="close" title="Close Modal">&times;</span>
-			<form class="modal-content" action="ConnexionGestion/connecter.php" method="POST" style="border:1px solid #ccc">
+			<form class="modal-content" onsubmit="return verifierDonneesConnex()" action="ConnexionGestion/connecter.php" method="POST" style="border:1px solid #ccc">
   				<div class="container">
     				<h1>Connexion</h1>
     				<p>Remplissez pour la connexion</p>
     				<hr>
 
     				<label for="nom"><b>Username</b></label><br>
-    				<input type="text" placeholder="Entrer Username" name="nom" required>
+    				<input type="text" onKeyUp="longueurMax(this, 30);" placeholder="Entrer Username" name="nom" required>
     				<br>
             <label for="passe"><b>Mot de passe</b></label><br>
-            <input type="password" placeholder="Entrer mot de passe" name="passe" id="passe-bar3" required>
+            <input type="password" onKeyUp="longueurMax(this, 30);" placeholder="Entrer mot de passe" name="passe" id="passe-bar3" required>
            	<br>
            		
            	<input type="checkbox" onclick="showPasse(2)">Montrer Mot de passe
@@ -260,14 +262,14 @@ session_start();
     <!-- Globalement la meme chose que le formulaire precendent mai renvoie des informations différentes a une page php differente : ici resultats.php pour la recherche en admin-->
     <div id="adminFen" class="modal">
           <span onclick="document.getElementById('adminFen').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <form class="modal-content" action="ConnexionGestion/resultats.php" method="POST" style="border:1px solid #ccc">
+      <form class="modal-content" onsubmit="return verifierDonneesConnex()" action="ConnexionGestion/resultats.php" method="POST" style="border:1px solid #ccc">
           <div class="container">
             <h1>Recherche</h1>
             <p>Remplissez pour gerer les utilisateurs</p>
             <hr>
 
             <label for="nom"><b>Username</b></label><br>
-            <input type="text" placeholder="Entrer Username" name="nom">
+            <input type="text" onKeyUp="longueurMax(this, 30);" placeholder="Entrer Username" name="nom">
             <br>
 
             En ordre: 
