@@ -15,7 +15,6 @@ session_start();
 		<script type="text/javascript" src="scripts/navigation.js"></script>
 		<script type="text/javascript" src="scripts/formulaireContacter.js"></script>
 		<script type="text/javascript" src="scripts/formInputMax.js"></script>
-		<script type="text/javascript" src="scripts/formulaireConnexVerif.js"></script>
  
 		<!-- script pour google maps -->
 		<script type="text/javascript" src="scripts/map.js"></script>

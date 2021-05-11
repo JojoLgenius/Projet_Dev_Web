@@ -14,7 +14,7 @@ session_start();
 		<link rel="stylesheet" type="text/css" href="style/navigation.css">
 		<script type="text/javascript" src="scripts/navigation.js"></script>
 		<script type="text/javascript" src="scripts/formInputMax.js"></script>
-		<script type="text/javascript" src="scripts/formulaireConnexVerif.js"></script>
+
 	</head>
 
 
