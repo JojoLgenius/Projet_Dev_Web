@@ -19,7 +19,7 @@ session_start();
     <script type="text/javascript" src="scripts/navigation.js"></script>
     <script type="text/javascript" src="scripts/sonVideo.js"></script>
     <script type="text/javascript" src="scripts/formInputMax.js"></script>
-    <script type="text/javascript" src="scripts/formulaireConnexVerif.js"></script>
+    
 	</head>
 
 	<body>

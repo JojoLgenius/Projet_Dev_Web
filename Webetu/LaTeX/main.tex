@@ -1,0 +1,98 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+
+\title{Projet Développement Web}
+\author{HAUF Jocelyn \and ROME Sylvain}
+\date{Mai 2021}
+
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Introduction}
+
+
+Afin de réaliser ce projet de développement web, nous avons choisi de faire un binôme dans le but de nous partager les tâches et de mettre en commun nos différentes connaissances.\\
+Pour commencer nous avons réfléchi au type de site que nous voulions créer, il fallait qu'il corresponde aux attentes du sujet, mais aussi que son code soit à notre portée. De ce fait le choix fût de créer un site à but informatif avec la possibilité d'interaction avec l'utilisateur.\\
+
+Par la suite, il nous fallait trouver une thématique intéressante et correspondant au caractère informatif du site, ainsi nous nous sommes mit d'accord sur un thème qui nous plaît à tous deux et sur lequel nous avions quelques connaissances, qui est la \textbf{Formule 1}.\\
+
+\section{Style}
+
+Pour le style, nous avons choisi d'avoir un fond sombre afin d'avoir un rendu non agressif pour les yeux et de pouvoir travailler dans de bonnes conditions tout le long de notre programmation.\\
+\\
+
+Nous avons séparés les différents fichiers \emph{CSS} en fonction de leur page liées afin de se repérer facilement lors des modifications.\\
+
+\section{Pages}
+\subsection{Accueil}
+
+La page d'accueil était initialement exclusivement écrite en \emph{HTML} (combinée avec un \emph{CSS}) afin de nous donner un aperçu global et avoir une sorte de maquette du résultat attendu, nous avons donc mit un menu de navigation qui pourrait être mis à jour ultérieurement en cas de nouveaux liens, ainsi qu'une zone de présentation pour donner les informations essentielles à l'utilisateur.\\
+
+Aussi nous avons trouvé intéressant d'ajouter un système de défilement d'image, comme nous pouvons retrouver sur de nombreux site actuels, dans le but d'apporter un effet dynamique.\\
+Cela avec l'usage de \emph{JavaScript} qui nous a aussi permis de mettre en oeuvre l'ouverture d'un menu par le biais d'un bouton présent sur la page, toujours pour accentuer cet aspect dynamique.
+
+\subsection{Nextrace}
+
+Cette page à été créée dans le but d'afficher un décompte avant la prochaine course de \textbf{Formule 1}, pour ce faire nous avons utilisé \emph{JavaScript} afin d'avoir un écoulement de secondes sans devoir obliger un rafraîchissement de la page.\\
+
+Nous avons préféré utiliser un format \emph{php} afin que la page se mette à jour sans le besoin de remettre à niveau le code. Pour cela, nous avons créé un fichier \emph{texte} dans lequel sont entrés plusieurs indications sur les prochaines courses séparées par un caractère particulier afin d'être lues par la page, en outre, nous avons insérer un système de commentaire dans le fichier. Cela nous a permis d'avoir une première approche avec les serveurs hors faculté (MAMP) et de mettre en pratique les premières méthodes vues en cours à l'aide des fonctions de traitement de fichier (\emph{fopen()}).Mais aussi de découvrir des fonctions comme \emph{time()} qui permettent de récupérer la date actuelle ou d'autres. 
+
+\subsection{Blog}
+
+Cette page est une partie servant à exploiter le php et la partie connexion du site.
+Le but est donc de pouvoir faire des articles de blog, de les afficher sur une page et de pouvoir avoir une interaction sous forme de commentaires sur ces articles.\\
+
+La page est faite de sorte que tout le monde même non connecté peut voir les articles de blog. Un admin, peut créer et supprimer les articles du blog et aussi supprimer n'importe quel commentaire de la page. Un membre, lui par contre, ne peut qu'écrire des commentaires et effacer ses propres commentaires.
+
+\subsubsection{Les articles}
+Les articles du blog sont en fait une simple de liste d'informations prises sur une base de données SQL et listées.\\
+A l'ajout d'un article un enregistre les informations et la date de création de l'article dans la base de données et le site n'affiche que les 10 plus récents articles ajoutés.
+La suppression marche elle grâce à un GET avec l'id de l'article a supprimer, renvoyé a une page php supprimant l'article de la base de données.
+
+\subsubsection{Les commentaires}
+Les commentaires sont listés comme les articles, a une exception près. A la création d'un commentaire on enregistre l'id de l'article sous lequel il a été écrit, puis, à l'affichage on n'affiche que les commentaires correspondants au bon article. 
+
+\subsection{Classements}
+Classement est aussi un listage d'informations stockées sur la base de données. 
+
+\section{Navigation}
+
+Cette section est à part entière car incorporée dans toutes les pages du site. Elle permet en appuyant sur l'icône de navigation en haut à droite de la page de faire dérouler le menu de navigation vers les autres pages du site (cf : scripts/navigation pour le déroulement et le début de chaque pages pour la structure ).\\
+
+Ce menu gère, les formulaires de connexion, de déconnexion, d'inscription et de gestion des membres (seulement quand l'utilisateur connecté est un admin). Il affiche aussi, les informations sur la personne connectée, son nom et son rang (de base la personne n'est pas connectée donc la navigation affiche : 'non connecté').
+
+\subsection{Partie connexion}
+
+La partie connexion débute avec des formulaires d'inscription ou de connexion. Ces formulaires sont dans le code html en fin de page mais sont cachés avec un "display: none". Un code JS fait que lors de l'appui sur un bouton, connexion par exemple : le display va se mettre en "block" ce qui va afficher la fenêtre, de plus l'index-z étant plus grand que celui de la page, le formulaire va venir se mettre au dessus de la page, ne renvoyant donc pas sur une nouvelle page.
+\\
+\\
+Pour ce qui est des formulaires, ils envoient eux leurs informations avec POST vers la partie ConnexionGestion du projet. \\ \\
+Connexion : "connecter.php" \\
+Inscription : "ajouter.php" \\
+Gestion membres : "resultats.php" \\ \\
+Le reste des fichiers sont appelés par ces trois fichiers php, si, par exemple l'admin à besoin de modifier ou de supprimer les informations d'un utilisateur.
+
+\section{Conclusion}
+
+
+\section{Ressources}
+
+Site des polices : \url{https://imjustcreative.com/download-formula-1-fonts/2018/07/16}\\
+Video de l'accueil : \url{https://www.youtube.com/watch?v=R0H0X0KXzbA}\\
+Images de circuits : \url{https://fr.wikipedia.org/wiki/Liste_alphabétique_des_circuits_de_Formule_1}\\
+Les images viennent de sites de fonds d'écran et son normalement libres de droits.
+Site d'aide pour le css : \url{https://www.w3schools.com/howto/default.asp}\\
+
+
+
+\end{document}
