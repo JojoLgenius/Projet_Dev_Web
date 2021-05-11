@@ -5,7 +5,7 @@
 
 	
 	define(HOTE,'localhost');
-	define(UTILISATEUR,'rs05378t');  
+	define(UTILISATEUR,'rs05379t');  
 	define(PASSE,'IFD4EJAQ');
 	
 	/*  /\
