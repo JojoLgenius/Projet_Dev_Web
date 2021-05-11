@@ -1,0 +1,162 @@
+* 
+{
+	box-sizing: border-box;
+}
+
+@font-face { /* La police d'ecriture */
+  font-family: 'f1-regular';
+  src:url('../polices/Formula1-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, html  /*petites choses essentielles*/ 
+{
+	font-family: 'f1-regular', sans-serif;
+	height: 100%;
+	width: 100%;
+	background-color : #000000;
+	margin: 0px;
+	padding: 0px;
+}
+
+header
+{
+	width: 100%;
+	position: absolute;
+	top: 45%;
+	left: 0;
+	text-align: center;
+}
+
+article::before
+{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	background: linear-gradient(to top,#000000,transparent);
+}
+
+article::after
+{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100px;
+	background: linear-gradient(to bottom,#000000,transparent);
+}
+
+
+
+
+
+
+
+/*POUR BLOG */
+
+.headerParallax
+{
+	background-image: url("../images/equipes/BlogBg2.jpg");
+
+	height: 100%;
+
+  	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+}
+
+.footerParallax
+{
+	background-image: url("../images/equipes/BlogBg2.jpg");
+
+	height: 50%;
+
+  	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+}
+
+.headerParallax span
+{
+	padding : 15px;
+	margin: auto;
+	font-size: 60px;
+	color: #fff;
+	background-color: rgba(0,0,0, 0.4);
+	border: 10px solid #f1f1f1;
+}
+
+
+#optionAdmin
+{
+	padding : 20px;
+	margin : 10px;
+	background-color: #000000;
+	text-align: center;
+	font-size: 25px;
+}
+
+.news
+{
+	width : 70%;
+	max-height : 500px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 100px;
+	margin-top: 30px;
+	color: white;
+	border: 5px solid #f1f1f1;
+	overflow: auto;
+}
+
+.news h3,h4
+{
+	text-align: center;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.news h3
+{
+	margin-top: 20px;
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+
+
+.news hr 
+{
+	width: 85%;
+  	border: 2px solid #f1f1f1;
+}
+
+
+.date
+{
+	margin-right: 7.5%;
+	font-size: 15px;
+	float: right;
+}
+
+.commentaires
+{
+	text-align: none;
+	margin-left: 5%;
+}
+
+.formCom
+{
+	height:40px;
+	margin-left: 5%;
+	margin-bottom: 10px;
+}
+
+.formCom textarea
+{
+	height: 25px;
+	width: 40%;
+}
