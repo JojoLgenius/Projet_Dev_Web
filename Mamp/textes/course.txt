@@ -1,0 +1,9 @@
+#Fichier regroupant les courses de F1
+#jj:mm:aaaa:hh:mm:circuit:lien_image_circuit:pays
+#
+28:03:2021:17:00:Circuit International de Sakhir:Ciruit_Sakhir.png:Bahrein
+18:04:2021:15:00:Autodrome d'Enzo Ferrari:Autodrome_Ferrari.png:Italie
+02:05:2021:16:00:Autodrome International d'Algarve:Autodrome_Algarve.png:Portugal
+09:05:2021:15:00:Circuit de Barcelone:Circuit_Catalunya.png:Espagne
+23:05:2021:15:00:Circuit de Monaco:Circuit_Monaco.png:Monaco
+06:06:2021:14:00:Circuit urbain de Bakou:Circuit_Bajou.png:Azerbaïdjan

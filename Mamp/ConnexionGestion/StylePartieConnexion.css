@@ -1,0 +1,14 @@
+@font-face {
+	font-family: 'f1-regular';
+	src: local(Formula1 Display Regular),
+		 url('Formula1-Regular.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body
+{
+	font-family: 'f1-regular', sans-serif;
+	background-color: #161616;
+	color : white;
+}
