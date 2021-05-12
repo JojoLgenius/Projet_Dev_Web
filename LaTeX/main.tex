@@ -56,18 +56,21 @@ La page est faite de sorte que tout le monde même non connecté peut voir les a
 
 \subsubsection{Les articles}
 Les articles du blog sont en fait une simple de liste d'informations prises sur une base de données SQL et listées.\\
-A l'ajout d'un article un enregistre les informations et la date de création de l'article dans la base de données et le site n'affiche que les 10 plus récents articles ajoutés.
+A l'ajout d'un article on enregistre les informations et la date de création de l'article dans la base de données et le site n'affiche que les 10 plus récents articles ajoutés.\\
 La suppression marche elle grâce à un GET avec l'id de l'article a supprimer, renvoyé a une page php supprimant l'article de la base de données.
 
 \subsubsection{Les commentaires}
-Les commentaires sont listés comme les articles, a une exception près. A la création d'un commentaire on enregistre l'id de l'article sous lequel il a été écrit, puis, à l'affichage on n'affiche que les commentaires correspondants au bon article. 
+Les commentaires sont listés comme les articles, à une exception près. A la création d'un commentaire on enregistre l'id de l'article sous lequel il a été écrit, puis, à l'affichage on n'affiche que les commentaires correspondants au bon article. 
 
 \subsection{Classements}
-Classement est aussi un listage d'informations stockées sur la base de données. 
+Classement est aussi un listage d'informations stockées sur la base de données.\\
+Le but était d'avoir un listage du classement des pilotes en direct sans avoir à lever le petit doigt. Malheureusement une récupération des données d'autres sites via fluxRSS, était plutôt compliquée (Nous avons aussi essayer de récupérer les informations grâce a googleSheets qui permet de récupérer des informations sur une url donnée, cependant le rafraîchissement ne se faisait pas automatiquement).\\
+Nous avons donc préféré faire une table 'Pilotes' avec toutes les informations nécessaires se mettant à jour à chaque retours sur la page.\\\\
+Le listage fonctionne grâce à deux SELECT sur des informations différentes de la table et un while(var = "SELECT ..."->fetch()) sur ces données.
 
 \section{Navigation}
 
-Cette section est à part entière car incorporée dans toutes les pages du site. Elle permet en appuyant sur l'icône de navigation en haut à droite de la page de faire dérouler le menu de navigation vers les autres pages du site (cf : scripts/navigation pour le déroulement et le début de chaque pages pour la structure ).\\
+Cette section est à part entière car incorporée dans toutes les pages du site. Elle permet en appuyant sur l'icône de navigation en haut à droite de la page de faire dérouler le menu de navigation vers les autres pages du site (cf : scripts/navigation pour le déroulement et le début de chaque pages pour la structure).\\
 
 Ce menu gère, les formulaires de connexion, de déconnexion, d'inscription et de gestion des membres (seulement quand l'utilisateur connecté est un admin). Il affiche aussi, les informations sur la personne connectée, son nom et son rang (de base la personne n'est pas connectée donc la navigation affiche : 'non connecté').
 
@@ -87,11 +90,13 @@ Le reste des fichiers sont appelés par ces trois fichiers php, si, par exemple 
 
 \section{Ressources}
 
-Site des polices : \url{https://imjustcreative.com/download-formula-1-fonts/2018/07/16}\\
-Video de l'accueil : \url{https://www.youtube.com/watch?v=R0H0X0KXzbA}\\
-Images de circuits : \url{https://fr.wikipedia.org/wiki/Liste_alphabétique_des_circuits_de_Formule_1}\\
-Les images viennent de sites de fonds d'écran et son normalement libres de droits.
-Site d'aide pour le css : \url{https://www.w3schools.com/howto/default.asp}\\
+Site des polices : \url{https://imjustcreative.com/download-formula-1-fonts/2018/07/16}\\\\
+Video de l'accueil : \url{https://www.youtube.com/watch?v=R0H0X0KXzbA}\\\\
+Images de circuits : \url{https://fr.wikipedia.org/wiki/Liste_alphabétique_des_circuits_de_Formule_1}\\\\
+Les images viennent de sites de fonds d'écran et son normalement libres de droits.\\\\
+Site d'aide pour le css : \url{https://www.w3schools.com/howto/default.asp}\\\\
+Site d'aide pour le php en plus du cours :\\
+\url{https://openclassrooms.com/fr/courses/918836-concevez-votre-site-web-avec-php-et-mysql}\\\\
 
 
 
