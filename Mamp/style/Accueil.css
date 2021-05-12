@@ -13,8 +13,8 @@ body, html  /*petites choses essentielles*/
 	background-color : #000000;
 	margin: 0px;
 	padding: 0px;
-  color: #fff;
-  overflow-x:hidden;
+  	color: #fff;
+  	overflow-x:hidden;
 }
 
 
@@ -28,7 +28,7 @@ h1
 /*MAIN*/
 #main
 {
-  transition: margin-left .5s;
+  	transition: margin-left .5s;
  	padding-left: 40px;
  	padding-top: 0px;
  	margin:auto;
@@ -36,59 +36,59 @@ h1
 
 article
 {
-  position: absolute;
-  top: 100%;
-  background-image: url(../images/equipes/logoF1.jpg);
-  background-size: cover;
+  	position: absolute;
+  	top: 100%;
+  	background-image: url(../images/equipes/logoF1.jpg);
+  	background-size: cover;
 }
 
 article h1
 {
-  width: 35%;
+  	width: 35%;
 	text-align: center;
-  margin: auto;
-  border: 8px solid #fff;
-  font-size : 4vw;
+  	margin: auto;
+  	border: 8px solid #fff;
+  	font-size : 4vw;
 }
 
 article p
 {
-  font-size: 1.2vw;
+  	font-size: 1.2vw;
 	line-height: 1.5em;
 	margin-right: 8%;
 	margin-left: 8%;
-  margin-bottom: 5%;
+  	margin-bottom: 5%;
 }
 
 article #p1
 {
-  margin-top: 12%;
-  text-align: justify;
-  font-size: 1.1vw;
+  	margin-top: 12%;
+  	text-align: justify;
+  	font-size: 1.1vw;
 }
 
 article #p2
 {
-  text-align: center;
-  margin-bottom: 10%;
+  	text-align: center;
+  	margin-bottom: 10%;
 }
 
 article .articlePress span
 {
-  width: 100%;
-  position: absolute;
-  top: 50px;
-  text-align: center;
+  	width: 100%;
+  	position: absolute;
+  	top: 50px;
+  	text-align: center;
 }
 
 
 @media screen and (max-width: 900px) {
   article p {
-    font-size: 2.5vw;
+    	font-size: 2.5vw;
   }
   article #p1 {
-    margin-top: 100px;
-    font-size: 2.3vw;
+    	margin-top: 100px;
+    	font-size: 2.3vw;
   }
 
 }
@@ -100,9 +100,9 @@ article .articlePress span
 
 .slideshow-container
 {
-  max-width: 100%;
-  position: relative;
-  margin-left: 2px;
+  	max-width: 100%;
+  	position: relative;
+  	margin-left: 2px;
 }
 
 .mySlides /* toutes les slides cachées */
@@ -117,73 +117,73 @@ article .articlePress span
 
 .prev, .next  /* boutons en position absolute dans le conteneur d'images plus mise en place du bouton prev au bon endroit*/
 {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -20px;
-  padding: 15px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s;
-  user-select: none;
-  border-radius: 3px 0 0 3px;
+  	cursor: pointer;
+  	position: absolute;
+  	top: 50%;
+  	width: auto;
+  	margin-top: -20px;
+  	padding: 15px;
+  	color: white;
+  	font-weight: bold;
+  	font-size: 20px;
+  	transition: 0.6s;
+  	user-select: none;
+  	border-radius: 3px 0 0 3px;
 }
 
 .next  /*mise en place du bouton next de l'autre coté */
 {
-  right: 0;
+  	right: 0;
 }
 
 .prev:hover, .next:hover 
 {
-  background-color: rgba(0,0,0,0.8);
+  	background-color: rgba(0,0,0,0.8);
 }
 
 .text /* description des photos, roulante elle aussi */ 
 {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;  /*en bas au millieu*/
-  text-align: center; /*utilisation de text center et pas left: 50%; car plus joli avec du texte*/ 
-  margin-bottom: 20px;
+  	color: #f2f2f2;
+  	font-size: 15px;
+ 	padding: 8px 12px;
+	position: absolute;
+  	bottom: 8px;
+  	width: 100%;  /*en bas au millieu*/
+  	text-align: center; /*utilisation de text center et pas left: 50%; car plus joli avec du texte*/ 
+  	margin-bottom: 20px;
 }
 
 
 .numbertext  /* numero de l'image sur laquelle nous nous trouvons */
 {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0; /* tout en haut a gauche */
+  	color: #f2f2f2;
+  	font-size: 12px;
+  	padding: 8px 12px;
+  	position: absolute;
+  	top: 0; /* tout en haut a gauche */
 }
 
 .dot  /* points en bas de l'image */
 {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px 50px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+  	cursor: pointer;
+  	height: 15px;
+  	width: 15px;
+  	margin: 0 2px 50px;
+  	background-color: #bbb;
+  	border-radius: 50%;
+  	display: inline-block;
+  	transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover
 {
-  background-color: #717171;
+  	background-color: #717171;
 }
 
 .fade  /* petite animation */
 {
-  animation-name: fade;
-  animation-duration: 1.5s;
+  	animation-name: fade;
+  	animation-duration: 1.5s;
 }
 
 /* desciption de l'animation */
@@ -195,25 +195,25 @@ article .articlePress span
 
 
 #myVideo {  /*position de la video */
-  position: absolute;
-  left: 42px;
-  bottom: 0;
-  min-width: 97.5%;
-  min-height: 100%;
-  z-index: 0;
+  	position: absolute;
+  	left: 42px;
+  	bottom: 0;
+  	min-width: 97.5%;
+  	min-height: 100%;
+  	z-index: 0;
 }
 
 
 #boutonSonVideo  /* position du bouton mute/unmute */
 {
-  font-family: 'f1-regular', sans-serif;
-  font-size: 1.3vw;
-  width: auto;
-  height: auto;
-  color: white;
-  background-color: rgba(0,0,0,0.7);
-  position: absolute;
-  top:5%;
-  left:90%;
-  z-index: 1;
+  	font-family: 'f1-regular', sans-serif;
+  	font-size: 1.3vw;
+  	width: auto;
+  	height: auto;
+  	color: white;
+  	background-color: rgba(0,0,0,0.7);
+  	position: absolute;
+  	top:5%;
+  	left:90%;
+  	z-index: 1;
 }
