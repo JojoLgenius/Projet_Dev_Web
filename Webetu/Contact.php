@@ -121,7 +121,7 @@ session_start();
 				</div>
 				<div id="card1">
 					<div class="card">
-  						<img src="images/imgPortrait1.jpg" alt="Sylvain" style="width:50%">
+  						<img src="images/Createur/Sylvain.jpg" alt="Sylvain" style="width:50%">
   						<h1>Sylvain Rome</h1>
   						<p class="title">Etudiant L2</p>
   						<p>Jean Monnet  Saint-Etienne</p>
