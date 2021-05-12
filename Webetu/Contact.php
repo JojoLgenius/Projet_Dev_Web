@@ -15,7 +15,7 @@ session_start();
 		<script type="text/javascript" src="scripts/navigation.js"></script>
 		<script type="text/javascript" src="scripts/formulaireContacter.js"></script>
 		<script type="text/javascript" src="scripts/formInputMax.js"></script>
- 
+
 		<!-- script pour google maps -->
 		<script type="text/javascript" src="scripts/map.js"></script>
 
@@ -44,10 +44,10 @@ session_start();
 			<img id="imageNav" src="images/navImage.png" alt="menu" onclick="openNav()">
 	    </div>
 
-		<div id="mySidenav" class="sidenav"> 		
+		<div id="mySidenav" class="sidenav">
       		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-      		<?php 
+      		<?php
       		/*si la personne est connectée*/
       		/* On lui donne la permission de voir sa classe et si il est connecté */
       		/* Sinon on ecrit deconnecté */
@@ -91,7 +91,7 @@ session_start();
 				<a onclick="document.getElementById('connexionFen').style.display='block'" class='serveur'>Connexion</a>
 				END;
 				echo <<<END
-				<a onclick="document.getElementById('inscriptionFen').style.display='block'" class='serveur' >Inscription</a> 
+				<a onclick="document.getElementById('inscriptionFen').style.display='block'" class='serveur' >Inscription</a>
 				END;
 			}
 			?>
@@ -132,7 +132,7 @@ session_start();
 
 				<div id="card2">
 					<div class="card">
-  						<img src="images/imgPortrait1.jpg" alt="Jocelyn" style="width:50%">
+  						<img src="images/Createur/Jocelyn.jpg" alt="Jocelyn" style="width:50%">
   						<h1>Jocelyn Hauf</h1>
   						<p class="title">Etudiant L2</p>
   						<p>Jean Monnet  Saint-Etienne</p>
@@ -158,8 +158,8 @@ session_start();
   				<div class="container">
     				<p>Remplissez les informations pour nous contacter</p>
     				<hr>
-    				<!-- On demande le Nom le Prenom l'email et le message 
-    					ATTENTION PROBLEME SUR envoyerMail.php COMMANDE MAIL NE MARCHE PAS --> 
+    				<!-- On demande le Nom le Prenom l'email et le message
+    					ATTENTION PROBLEME SUR envoyerMail.php COMMANDE MAIL NE MARCHE PAS -->
     				<label for="nom"><b>Nom</b></label><br>
     				<input type="text" onKeyUp="longueurMax(this, 40);" id="nom" placeholder="Entrer Nom" name="nom" required><br>
 
@@ -208,7 +208,7 @@ session_start();
           <!-- cette fenetre est en fait en cascade devant la page de base   grace a z-index dans le css sous .modal -->
         	<span onclick="document.getElementById('inscriptionFen').style.display='none'" class="close" title="Close Modal">&times;</span>
 			<form class="modal-content" action="ConnexionGestion/ajouter.php" method="POST" style="border:1px solid #ccc">
-          <!-- debut formulaire  sui renvoie via POST les informations du fomulaire a "ajouter.php" --> 
+          <!-- debut formulaire  sui renvoie via POST les informations du fomulaire a "ajouter.php" -->
   				<div class="container">
     				<h1>Inscription</h1>
     				<p>Remplissez les informations pour vous inscrire</p>
@@ -222,7 +222,7 @@ session_start();
 
     				<label for="pass-repeat"><b>Réécrire le mot de passe</b></label><br>
     				<input type="password" onKeyUp="longueurMax(this, 30);" placeholder="Repéter mot de passe" name="passe-repeat" id="passe-bar2" required><br>
-					
+
 					<input type="checkbox" onclick="showPasse(1)">Montrer Mot de passe
 
     				<div class="clearfix">
@@ -251,7 +251,7 @@ session_start();
     				<br>
             		<label for="passe"><b>Mot de passe</b></label><br>
             		<input type="text" onKeyUp="longueurMax(this, 30);" placeholder="Entrer mot de passe" name="passe" id="passe-bar3"required>
-            
+
             		<br>
             		<input type="checkbox" onclick="showPasse(2)">Montrer Mot de passe
 
@@ -278,8 +278,8 @@ session_start();
 	            <input type="text" onKeyUp="longueurMax(this, 30);" placeholder="Entrer Username" name="nom">
 	            <br>
 
-	            En ordre: 
-	            <label>Croissant <input type="radio" name="ordre" value="ASC" checked="checked"></label> 
+	            En ordre:
+	            <label>Croissant <input type="radio" name="ordre" value="ASC" checked="checked"></label>
 	            <label>Décroissant <input type="radio" name="ordre" value="DESC"></label><br>
 
 	            <div class="clearfix">

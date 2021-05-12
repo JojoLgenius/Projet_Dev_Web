@@ -45,7 +45,7 @@ Cela avec l'usage de \emph{JavaScript} qui nous a aussi permis de mettre en oeuv
 
 Cette page à été créée dans le but d'afficher un décompte avant la prochaine course de \textbf{Formule 1}, pour ce faire nous avons utilisé \emph{JavaScript} afin d'avoir un écoulement de secondes sans devoir obliger un rafraîchissement de la page.\\
 
-Nous avons préféré utiliser un format \emph{php} afin que la page se mette à jour sans le besoin de remettre à niveau le code. Pour cela, nous avons créé un fichier \emph{texte} dans lequel sont entrés plusieurs indications sur les prochaines courses séparées par un caractère particulier afin d'être lues par la page, en outre, nous avons insérer un système de commentaire dans le fichier. Cela nous a permis d'avoir une première approche avec les serveurs hors faculté (MAMP) et de mettre en pratique les premières méthodes vues en cours à l'aide des fonctions de traitement de fichier (\emph{fopen()}).Mais aussi de découvrir des fonctions comme \emph{time()} qui permettent de récupérer la date actuelle ou d'autres. 
+Nous avons préféré utiliser un format \emph{php} afin que la page se mette à jour sans le besoin de remettre à niveau le code. Pour cela, nous avons créé un fichier \emph{texte} dans lequel sont entrés plusieurs indications sur les prochaines courses séparées par un caractère particulier afin d'être lues par la page, en outre, nous avons insérer un système de commentaire dans le fichier. Cela nous a permis d'avoir une première approche avec les serveurs hors faculté (MAMP) et de mettre en pratique les premières méthodes vues en cours à l'aide des fonctions de traitement de fichier (\emph{fopen()}).Mais aussi de découvrir des fonctions comme \emph{time()} qui permettent de récupérer la date actuelle ou d'autres.
 
 \subsection{Blog}
 
@@ -60,7 +60,7 @@ A l'ajout d'un article on enregistre les informations et la date de création de
 La suppression marche elle grâce à un GET avec l'id de l'article a supprimer, renvoyé a une page php supprimant l'article de la base de données.
 
 \subsubsection{Les commentaires}
-Les commentaires sont listés comme les articles, à une exception près. A la création d'un commentaire on enregistre l'id de l'article sous lequel il a été écrit, puis, à l'affichage on n'affiche que les commentaires correspondants au bon article. 
+Les commentaires sont listés comme les articles, à une exception près. A la création d'un commentaire on enregistre l'id de l'article sous lequel il a été écrit, puis, à l'affichage on n'affiche que les commentaires correspondants au bon article.
 
 \subsection{Classements}
 Classement est aussi un listage d'informations stockées sur la base de données.\\
@@ -85,9 +85,34 @@ Inscription : "ajouter.php" \\
 Gestion membres : "resultats.php" \\ \\
 Le reste des fichiers sont appelés par ces trois fichiers php, si, par exemple l'admin à besoin de modifier ou de supprimer les informations d'un utilisateur.
 
-\section{Conclusion}
+\section{Accès}
+
+Le site est hébergé sur les serveurs de la faculté des sciences, alors pour pouvoir y accéder, il faut entrer l'url suivante :
+\begin{center}
+\url{https://webetu.univ-st-etienne.fr/rs05379t/Accueil.php}
+\end{center}
+\vspace{1cm}
+Les tables ont automatiquement été créée avec deux utilisateurs \emph{admin}, lors informations de connexions sont les suivantes :
+\vspace{5mm}
+\begin{center}
+\fbox{
+\begin{minipage}{0.30\textwidth}
+User : \emph{jojo} \\
+Password : \emph{lerigolo}
+\end{minipage}
+}
+\hspace{1cm}
+\fbox{
+\begin{minipage}{0.30\textwidth}
+User : \emph{syl42}\\
+Password : \emph{cuitdesoeufs}
+\end{minipage}
+}
+\end{center}
 
 
+
+\newpage
 \section{Ressources}
 
 Site des polices : \url{https://imjustcreative.com/download-formula-1-fonts/2018/07/16}\\\\
