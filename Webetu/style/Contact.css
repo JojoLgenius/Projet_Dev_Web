@@ -28,7 +28,7 @@ body, html  /*petites choses essentielles*/
 /* CARTES DE PRESENTATION AVEC UN BACKGROUND "PARALLAX"*/
 .headerCards
 {
-	background-image: url("../images/equipes/COntactBg.jpg");
+	background-image: url("../images/equipes/ContactBg.jpg");
 
 	height: 100%;
 
