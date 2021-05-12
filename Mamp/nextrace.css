@@ -1,0 +1,142 @@
+/*Code CSS pour la page Nextrace.php*/
+/*Si le CSS ne s'actualise pas correctement : ctrl+F5 */
+
+
+@font-face {
+	font-family: 'f1-regular';
+	src:url('../polices/Formula1-Regular.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'f1-Wide';
+	src:url('../polices/Formula1-Wide.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'f1-Bold';
+	src:url('../polices/Formula1-Bold.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+  height: 100%;
+}
+
+body
+{
+	font-family: 'f1-regular', sans-serif;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background-color : #161616;
+
+	margin: 0;
+	margin-top: -25px;
+	padding: 0;
+}
+h1{
+	font-family: 'f1-Bold', sans-serif;
+	font-size : 40px;
+	text-align: center;
+	text-shadow: 1px 2px 3px #D81118;
+	color: #BBBBBB;
+}
+
+h2{
+
+	font-size: 50px;
+	color: #BBBBBB;
+	text-align: center;
+	margin: 0% 10% 15px 10%;
+}
+
+p{
+
+	font-size: 20px;
+	color: black ;
+}
+em{
+	font-style: normal;
+}
+
+figcaption{
+
+	font-size: 10px;
+	color: black ;
+	float:right;
+}
+.source{
+	text-decoration: underline;
+}
+/*En-tête
+
+*/
+header{
+	width: 100%;
+	/*Ne marche pas avec display inline*/
+	/*
+	background-color: #121212;
+	border-bottom: 2px solid black;
+	*/
+	padding-top: 10px;
+	margin-bottom: 10px;
+	display: inline;
+}
+/*En-tete item (icone maison)*/
+#home{
+	margin-left: 5%;
+	float : left;
+	vertical-align: middle;
+}
+
+/*Pied de page
+Position en bas à droite decalé legerement vers la gauche
+*/
+footer{
+	position:relative;
+	float: right;
+	margin-top:2%;
+	margin-right: 2%;
+	margin-bottom:2%;
+}
+/*TAille de la police du pied de page*/
+footer>p{
+	font-size: 10px;;
+}
+/*Contenant des Jours restants*/
+.attente{
+	padding-left: 30px;
+	padding-right: 30px;
+	display: flex;
+	justify-content: center;
+}
+/*Jours restants
+En rouge et disposés sur une seule ligne
+*/
+.it{
+	color: #D81108;
+	font-size: 60px;
+	margin:3%;
+	display: inline-block;
+	vertical-align: middle;
+}
+.circuit{
+	background-color: #242424;
+	box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin-left:10%;
+	margin-right:10%;
+	padding-bottom:40px;
+}
+.circuit:hover{
+	border:2px solid grey;
+}
+.image{
+	text-align: center;
+	display: block;
+	margin: auto;
+	width: 70%;
+}
