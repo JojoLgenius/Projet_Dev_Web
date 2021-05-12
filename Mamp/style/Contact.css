@@ -13,6 +13,7 @@ body, html  /*petites choses essentielles*/
 	background-color : #161616;
 	margin: 0px;
 	padding: 0px;
+	overflow-x: hidden;
 }
 
 
