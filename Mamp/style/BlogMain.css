@@ -1,8 +1,3 @@
-* 
-{
-	box-sizing: border-box;
-}
-
 @font-face { /* La police d'ecriture */
   font-family: 'f1-regular';
   src:url('../polices/Formula1-Regular.otf');
