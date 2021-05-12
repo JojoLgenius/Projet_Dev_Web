@@ -22,7 +22,7 @@ session_start();
 		<!--Importations de scripts donnés par google pour implanter google maps
 		    Marche seulement avec botre clé API, et donc sur les url que nous avons décidés -->
 		<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHW2nIfjKcUAbA1DRIjLDXw0FTZV34q4Q&callback=initMap&libraries=&v=weekly"
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABJQ05MfOy-qFLHUIrt4mDdHvfnXQa7Cw&callback=initMap&libraries=&v=weekly"
       async></script>
 	</head>
 
@@ -132,7 +132,7 @@ session_start();
 
 				<div id="card2">
 					<div class="card">
-  						<img src="images/imgPortrait1.jpg" alt="Jocelyn" style="width:50%">
+  						<img src="images/imgPortrait2.jpg" alt="Jocelyn" style="width:50%">
   						<h1>Jocelyn Hauf</h1>
   						<p class="title">Etudiant L2</p>
   						<p>Jean Monnet  Saint-Etienne</p>
