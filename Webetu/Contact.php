@@ -22,7 +22,7 @@ session_start();
 		<!--Importations de scripts donnés par google pour implanter google maps
 		    Marche seulement avec botre clé API, et donc sur les url que nous avons décidés -->
 		<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHW2nIfjKcUAbA1DRIjLDXw0FTZV34q4Q&callback=initMap&libraries=&v=weekly"
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABJQ05MfOy-qFLHUIrt4mDdHvfnXQa7Cw&callback=initMap&libraries=&v=weekly"
       async></script>
 	</head>
 
