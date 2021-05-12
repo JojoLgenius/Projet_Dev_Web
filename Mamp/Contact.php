@@ -132,7 +132,7 @@ session_start();
 
 				<div id="card2">
 					<div class="card">
-  						<img src="images/imgPortrait1.jpg" alt="Jocelyn" style="width:50%">
+  						<img src="images/imgPortrait2.jpg" alt="Jocelyn" style="width:50%">
   						<h1>Jocelyn Hauf</h1>
   						<p class="title">Etudiant L2</p>
   						<p>Jean Monnet  Saint-Etienne</p>
