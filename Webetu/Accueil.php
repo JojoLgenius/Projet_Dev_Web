@@ -102,7 +102,7 @@ session_start();
 		<div id="main">
 
       <video autoplay="true" muted="true" loop="true" id="myVideo">
-        <source src="video/2021-f1-opening-titles.mp4" type="video/mp4">
+        <source src="video/2021-f1-opening-titles.MP4" type="video/mp4">
       </video>
       <button type="button" onclick="unmuteVideo()" id="boutonSonVideo" value="Off">Unmute</button>
 
