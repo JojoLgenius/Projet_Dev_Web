@@ -19,7 +19,6 @@ session_start();
     <script type="text/javascript" src="scripts/navigation.js"></script>
     <script type="text/javascript" src="scripts/sonVideo.js"></script>
     <script type="text/javascript" src="scripts/formInputMax.js"></script>
-    
 	</head>
 
 	<body>
@@ -50,7 +49,7 @@ session_start();
   		<a href="Blog.php">Blog</a>
   		<a href="Classements.php">Classement</a>
   		<a href="Contact.php">Contact</a>
-		  <a href="nextrace.php">Prochaine course</a>
+		<a href="nextrace.php">Prochaine course</a>
       <br>
       <br>
 
@@ -138,21 +137,45 @@ session_start();
 				<div class="slideshow-container">
             <!-- chargement des images mais seule la deuxieme avec la class firstSlide est affichée a l'entrée sur la page, les images changent vie des fleches ou des points -->
   					<div class="mySlides fade ">
-    					<div class="numbertext">1 / 3</div>
+    					<div class="numbertext">1 / 7</div>
     					<img src="images/equipes/renault_formule1.jpg" style="width:100%">
     					<div class="text">Renault</div>
   					</div>
 
   					<div class="mySlides fade">
-    					<div class="numbertext">2 / 3</div>
+    					<div class="numbertext">2 / 7</div>
    						<img src="images/equipes/williams_formule1.jpg" style="width:100%">
     					<div class="text">Williams</div>
   					</div>
 
   					<div class="mySlides fade firstSlide">
-    					<div class="numbertext">3 / 3</div>
+    					<div class="numbertext">3 / 7</div>
     					<img src="images/equipes/alpine_formule1.jpg" style="width:100%">
     					<div class="text">Alpine</div>
+  					</div>
+
+  					<div class="mySlides fade">
+    					<div class="numbertext">4 / 7</div>
+    					<img src="images/equipes/mercedes_formule1.jpg" style="width:100%">
+    					<div class="text">Mercedes</div>
+  					</div>
+
+  					<div class="mySlides fade">
+    					<div class="numbertext">5 / 7</div>
+    					<img src="images/equipes/ferrari_formule1.jpg" style="width:100%">
+    					<div class="text">Ferrari</div>
+  					</div>
+
+  					<div class="mySlides fade">
+    					<div class="numbertext">6 / 7</div>
+    					<img src="images/equipes/astonmartin_formule1.jpg" style="width:100%">
+    					<div class="text">Aston Martin</div>
+  					</div>
+
+  					<div class="mySlides fade">
+    					<div class="numbertext">7 / 7</div>
+    					<img src="images/equipes/redbull_formule1.jpg" style="width:100%">
+    					<div class="text">Red Bull</div>
   					</div>
 
             <!-- fleches appelant la fonction plusSlide, pour avoir l'image d'avant un fait un -1 et pour celle d'apres un +1 car la valeur de l'image affichée oscille entre 1 et 3 -->
@@ -166,6 +189,10 @@ session_start();
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
         </div>
         </article>
 
