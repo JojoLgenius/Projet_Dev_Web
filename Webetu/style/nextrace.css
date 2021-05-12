@@ -28,11 +28,14 @@ html {
 
 body
 {
+	font-family: 'f1-regular', sans-serif;
 	position: relative;
 	height: 100%;
 	width: 100%;
 	background-color : #161616;
+
 	margin: 0;
+	margin-top: -25px;
 	padding: 0;
 }
 h1{
@@ -44,7 +47,7 @@ h1{
 }
 
 h2{
-	font-family: 'f1-regular', sans-serif;
+
 	font-size: 50px;
 	color: #BBBBBB;
 	text-align: center;
@@ -52,7 +55,7 @@ h2{
 }
 
 p{
-	font-family: 'f1-regular', sans-serif;
+
 	font-size: 20px;
 	color: black ;
 }
@@ -61,7 +64,7 @@ em{
 }
 
 figcaption{
-	font-family: 'f1-regular', sans-serif;
+
 	font-size: 10px;
 	color: black ;
 	float:right;
